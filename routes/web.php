@@ -12,8 +12,8 @@ Route::post('/login', [
     'as' => 'user.login'
 ]);
 Route::get('/Main', [
-    'uses' => 'App\Http\Controllers\UserAuthController@loginsuccess',
-    'as'=>'user.success'
+    'uses' => 'App\Http\Controllers\PuppyController@index',
+    'as'=>'puppy.index'
 ]);
 
 

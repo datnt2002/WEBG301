@@ -24,11 +24,12 @@ class UserAuthController extends Controller
             $password = $rq->input('password');
         }
         UserAuth::login($username, $password);
+
     }
 
-    public function loginsuccess(): void
+    public function loginsuccess()
     {
-        echo 'Hello';
+        return view('puppyWebsite.index');
     }
 
     public function register()
