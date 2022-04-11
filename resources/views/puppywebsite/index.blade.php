@@ -2,7 +2,6 @@
 
 @section('main')
     <div class="container-fluid">
-        <h1>PECA managements</h1>
         <div class="row">
             <div class="col-lg-3">
                 <div class="left">
