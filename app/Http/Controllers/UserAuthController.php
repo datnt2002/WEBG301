@@ -27,9 +27,12 @@ class UserAuthController extends Controller
 
     }
 
-    public function loginsuccess()
+    public function loginsuccess($checklogin)
     {
-        return view('puppyWebsite.index');
+        if($checklogin>0){
+
+        return redirect('/login/Main');
+    }
     }
 
     public function register()

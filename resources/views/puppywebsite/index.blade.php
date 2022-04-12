@@ -1,29 +1,29 @@
 @extends('puppywebsite.PuppyWebsiteMaster.PuppyMaster')
 
 @section('main')
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="left">
-                    <div class="card">
-                        <div class="card-header">
-                            Quicklink
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <a class="quick-link" href="">Home Page</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a class="quick-link" href="">Log out</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <div class="container-fluid" >
+{{--        <div class="row">--}}
+{{--            <div class="col-lg-3">--}}
+{{--                <div class="left">--}}
+{{--                    <div class="card">--}}
+{{--                        <div class="card-header">--}}
+{{--                            Quicklink--}}
+{{--                        </div>--}}
+{{--                        <ul class="list-group list-group-flush">--}}
+{{--                            <li class="list-group-item">--}}
+{{--                                <a class="quick-link" href="">Home Page</a>--}}
+{{--                            </li>--}}
+{{--                            <li class="list-group-item">--}}
+{{--                                <a class="quick-link" href="">Log out</a>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-            <div class="col-lg-9">
+            <div class="col-lg-9 ">
                 <div class="right">
-                    <table class="table">
+                    <table class="table ">
                         <thead class="thead-dark">
                         <tr>
                             <th>ID</th>
@@ -34,9 +34,11 @@
                             <th>Detail</th>
                             <th>Image</th>
                             <th>Color</th>
+                            <th>Function</th>
+                            <th>Function</th>
                         </tr>
                         <tr>
-                            @foreach($result as $each):
+                            @foreach($pets as $each):
                             <td>{{$each->id}}</td>
                             <td>{{$each->name}}</td>
                             <td>{{$each->gender}}</td>
@@ -47,6 +49,12 @@
                                 <img src="{{$each->image}}" alt="">
                             </td>
                             <td>{{$each->color}}</td>
+                            <td>
+                                <button class="btn btn-info"><a href=""></a>Update</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger"> <a href=""></a>Delete</button>
+                            </td>
                             @endforeach
                         </tr>
                     </table>

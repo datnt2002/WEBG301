@@ -2,14 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\DB;
+
+use App\Repository\PuppyRepos;
 use Illuminate\Http\Request;
 
 class PuppyController extends Controller
 {
     public function index()
     {
-        $result = DB::table('puppy')->get();
-        return view('puppywebsite.index', ['result' => $result]);
+        $pets = PuppyRepos::GetAllPet();
+        return view('puppywebsite.index', [
+            'pets' => $pets
+        ]);
+    }
+
+    public function confirm($id)
+    {
+
     }
 }
