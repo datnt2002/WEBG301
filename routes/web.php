@@ -12,10 +12,12 @@ Route::post('/login', [
 //    UserAuthController::class,'login',
     'as' => 'user.login'
 ]);
-Route::get('/Main', [
-    'uses' => 'App\Http\Controllers\PuppyController@index',
-    'as' => 'puppy.index'
-]);
-Route::get('/delete/{id}', [PuppyController::class,'confirm'])->name('puppy.confirm');
+Route::prefix('homepage')->group(function () {
+    Route::get('/Main', [PuppyController::class, 'index'])->name('puppy.index');
+    Route::get('/create',[PuppyController::class,'create'])->name('puppy.create');
+    Route::post('/create',[PuppyController::class,'store'])->name('puppy.store');
+    Route::get('/delete/{id}', [PuppyController::class, 'confirm'])->name('puppy.confirm');
+    Route::post('/update/{id}', [PuppyController::class, 'update'])->name('puppy.update');
+});
 
 

@@ -1,4 +1,4 @@
-@extends('UserAuth.master.UserAuthMaster')
+@extends('PuppyWebsiteMaster.PuppyMaster')
 {{--@include('partials.Errors')--}}
 @section('main')
     <div class="center">
