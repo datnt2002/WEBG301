@@ -9,26 +9,15 @@ Route::get('/login', [
 ]);
 Route::post('/login', [
     'uses' => 'App\Http\Controllers\UserAuthController@login',
-//    UserAuthController::class,'login',
+    //    UserAuthController::class,'login',
     'as' => 'user.login'
 ]);
-<<<<<<< HEAD
+
 Route::get('/Main', [
     'uses' => 'App\Http\Controllers\PuppyController@index',
-    'as'=>'puppy.index'
+    'as' => 'puppy.index'
 ]);
 Route::get('/register', [
     'uses' => 'App\Http\Controllers\RegisterController@index',
     'as' => 'user.register'
 ]);
-=======
-Route::prefix('homepage')->group(function () {
-    Route::get('/Main', [PuppyController::class, 'index'])->name('puppy.index');
-    Route::get('/create',[PuppyController::class,'create'])->name('puppy.create');
-    Route::post('/create',[PuppyController::class,'store'])->name('puppy.store');
-    Route::get('/delete/{id}', [PuppyController::class, 'confirm'])->name('puppy.confirm');
-    Route::post('/update/{id}', [PuppyController::class, 'update'])->name('puppy.update');
-});
-
->>>>>>> 5fb7cad3ef3ef2f3c28e38a06f2ba24fcbdf026e
-
