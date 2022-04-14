@@ -15,7 +15,7 @@
                                 <a class="quick-link" href="">Home Page</a>
                             </li>
                             <li class="list-group-item">
-                                <a class="quick-link" href="">Log out</a>
+                                <a class="quick-link" href="{{route('user.login')}}">Log out</a>
                             </li>
                         </ul>
                     </div>
@@ -35,6 +35,8 @@
                             <th>Detail</th>
                             <th>Image</th>
                             <th>Color</th>
+                            <th></th>
+                            <th></th>
                         </tr>
                         <tr>
                             @foreach($result as $each):
@@ -48,6 +50,8 @@
                                 <img src="{{$each->image}}" alt="">
                             </td>
                             <td>{{$each->color}}</td>
+                            <td><a type="button" class="btn btn-success btn-sm" href="">Edit</a></td>
+                            <td><a type="button" class="btn btn-success btn-sm" href="">Delete</a></td>
                             @endforeach
                         </tr>
                     </table>

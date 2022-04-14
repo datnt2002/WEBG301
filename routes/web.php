@@ -15,5 +15,8 @@ Route::get('/Main', [
     'uses' => 'App\Http\Controllers\PuppyController@index',
     'as'=>'puppy.index'
 ]);
-
+Route::get('/register', [
+    'uses' => 'App\Http\Controllers\RegisterController@index',
+    'as' => 'user.register'
+]);
 
