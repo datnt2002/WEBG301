@@ -1,4 +1,4 @@
-@extends('UserAuth.master.UserAuthMaster')
+@extends('PuppyWebsiteMaster.loginMaster')
 
 @section('main')
     <section>
@@ -103,6 +103,10 @@
 
                                 <div class="mt-4 pt-2">
                                     <input class="btn btn-primary btn-lg" type="submit" value="Submit"/>
+                                </div>
+
+                                <div class="signup_link">
+                                    Have a account <a href="{{route('user.login')}}">Sign in</a>
                                 </div>
 
                             </form>

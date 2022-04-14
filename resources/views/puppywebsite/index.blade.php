@@ -6,7 +6,7 @@
 @include('partials.adminNav')
 @include('partials.LeftNav');
 @section('main')
-<<<<<<< HEAD
+
     <div class="container-fluid">
         <h1>PECA managements</h1>
         <div class="row">
@@ -109,7 +109,7 @@
                 </table>
                 <!-- end row -->
 
->>>>>>> 5fb7cad3ef3ef2f3c28e38a06f2ba24fcbdf026e
+
             </div>
         </div>
     </div>
