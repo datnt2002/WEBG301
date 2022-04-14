@@ -11,7 +11,11 @@ class UserAuth
     public static function login($username, $password)
     {
         $checklogin = DB::table('userr')->where(['Username' => $username, 'Password' => $password])->count();
-       return $checklogin;
+       if($checklogin>0){
+           echo 'Login successful';
+       }
+       else redirect()->back()->withErrors(['message' => 'username or password is incorrect']);
+
 
     }
 }
