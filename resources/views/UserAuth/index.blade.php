@@ -1,4 +1,4 @@
-@extends('PuppyWebsiteMaster.PuppyMaster')
+@extends('PuppyWebsiteMaster.loginMaster')
 {{--@include('partials.Errors')--}}
 @section('main')
     <div class="center">
@@ -25,7 +25,7 @@
             <input type="submit" value="Login">
 
             <div class="signup_link">
-                Not a member? <a href="#">Signup</a>
+                Not a member? <a href="{{route('user.register')}}">Sign up</a>
             </div>
         </form>
     </div>
