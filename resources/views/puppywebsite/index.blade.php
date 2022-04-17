@@ -8,7 +8,7 @@
 @section('main')
     <div class="content-page">
         <div class="content">
-
+            <a href="{{Route('puppy.create')}}">ADD</a>
             <div class="container-fluid">
                 <!-- start page title -->
 
@@ -34,7 +34,7 @@
                         <td>
                             {{$each->name}}
                         </td>
-                        <td>{{$each->breedsID}}</td>
+                        <td>{{$each->bread}}</td>
                         <td>{{$each->gender}}</td>
                         <td>{{$each->area}}</td>
                         <td>{{$each->Detail}}</td>

@@ -19,7 +19,11 @@ class PuppyController extends Controller
 
     public function create()
     {
-        return view('puppywebsite.create');
+        $breed = PuppyRepos::GetAllBreeds();
+
+        return view('puppywebsite.create', [
+            'breed' => (object)$breed
+        ]);
 
     }
 
@@ -34,8 +38,8 @@ class PuppyController extends Controller
             'color' => $rq->color,
             'detail' => $rq->detail
         ];
-PuppyRepos::Store($pet);
-return redirect()->route('puppy.index');
+        PuppyRepos::Store($pet);
+        return redirect()->route('puppy.index');
     }
 
     public function confirm($id)
@@ -43,10 +47,19 @@ return redirect()->route('puppy.index');
 
     }
 
+    public function edit($id)
+    {
+        $pets = PuppyRepos::GetPetByID($id);
+        return view('puppywebsite.update',[
+            'pets' => $pets
+        ]);
+    }
+
     public function update($id)
     {
 
     }
+
 
 //    private function validate($rq)
 //    {

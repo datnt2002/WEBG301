@@ -8,8 +8,21 @@ class PuppyRepos
 {
     public static function GetAllPet()
     {
-        $result = DB::table('puppy')->get();
+        $result = DB::table('puppy')->join('breeds', 'puppy.breedsID', '=', 'breeds.id')->select('puppy.*', 'breeds.*')->get();
         return $result;
+    }
+
+    public static function GetAllBreeds()
+    {
+        $result = DB::table('breeds')->get();
+        return $result;
+    }
+
+    public static function GetPetByID($id)
+    {
+
+        return DB::table('puppy')->where('id', '=', $id)->join('breeds')->on('*')->select('puppy.*', 'breeds.*')->get();
+
     }
 
     public function Store($pet)
