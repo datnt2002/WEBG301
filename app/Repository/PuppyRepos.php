@@ -8,7 +8,9 @@ class PuppyRepos
 {
     public static function GetAllPet()
     {
-        $result = DB::table('puppy')->join('breeds', 'puppy.breedsID', '=', 'breeds.id')->select('puppy.*', 'breeds.*')->get();
+        $result = DB::table('puppy')->join('breeds', 'puppy.breedsID', '=', 'breeds.id')
+            ->select('puppy.*',
+                'breeds.*')->get();
         return $result;
     }
 
@@ -17,11 +19,14 @@ class PuppyRepos
         $result = DB::table('breeds')->get();
         return $result;
     }
+    public static function GetBreedByID($id)
+    {
+        return  DB::table('breeds')->where('id','=',$id)->get();
 
+    }
     public static function GetPetByID($id)
     {
-
-        return DB::table('puppy')->where('id', '=', $id)->join('breeds')->on('*')->select('puppy.*', 'breeds.*')->get();
+      return DB::table('puppy')->where('pid','=',$id)->get();
 
     }
 

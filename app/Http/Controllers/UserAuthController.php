@@ -31,7 +31,7 @@ class UserAuthController extends Controller
     {
         if($checklogin>0){
 
-        return redirect('/login/Main');
+        return view('puppy.index');
     }
     }
 

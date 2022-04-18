@@ -22,7 +22,7 @@ class PuppyController extends Controller
         $breed = PuppyRepos::GetAllBreeds();
 
         return view('puppywebsite.create', [
-            'breed' => (object)$breed
+            'breed' => $breed
         ]);
 
     }
@@ -50,15 +50,17 @@ class PuppyController extends Controller
     public function edit($id)
     {
         $pets = PuppyRepos::GetPetByID($id);
+        $breed = PuppyRepos::GetAllBreeds();
         return view('puppywebsite.update',[
-            'pets' => $pets
+            'pets' => $pets,
+            'breed'=>$breed
         ]);
     }
 
-    public function update($id)
-    {
-
-    }
+//    public function update($id)
+//    {
+//PuppyRepos::
+//    }
 
 
 //    private function validate($rq)

@@ -18,7 +18,7 @@ class Puppy extends Migration
             $table->string('bread', 100);
         });
         Schema::create('puppy', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('Pid');
             $table->string('name', 50);
             $table->boolean('gender');
             $table->string('area', 50);
