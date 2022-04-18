@@ -29,6 +29,7 @@ class PuppyController extends Controller
 
     public function store(Request $rq)
     {
+        $this->validation($rq)->validate();
         $pet = [
             'name' => $rq->name,
             'area' => $rq->area,
@@ -51,9 +52,9 @@ class PuppyController extends Controller
     {
         $pets = PuppyRepos::GetPetByID($id);
         $breed = PuppyRepos::GetAllBreeds();
-        return view('puppywebsite.update',[
+        return view('puppywebsite.update', [
             'pets' => $pets,
-            'breed'=>$breed
+            'breed' => $breed
         ]);
     }
 
@@ -63,10 +64,16 @@ class PuppyController extends Controller
 //    }
 
 
-//    private function validate($rq)
-//    {
-//        return Validator::make($rq->all(), [
-//
-//        ]);
-//    }
+    private function validation($rq)
+    {
+        return Validator::make($rq->all(), [
+            'name' => ['required'],
+            'area' => ['required'],
+            'Breed' => ['required'],
+            'gender' => ['required'],
+            'image' => ['required'],
+            'color'=>['required'],
+            'detail'=>['required']
+        ]);
+    }
 }
