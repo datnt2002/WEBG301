@@ -23,16 +23,20 @@ class UserAuthController extends Controller
             $username = $rq->input('username');
             $password = $rq->input('password');
         }
-        UserAuth::login($username, $password);
+       $checklogin =  UserAuth::login($username, $password);
+        if($checklogin>0){
+            return redirect()->Route('puppy.index');
+        }
+        else return redirect()->back();
 
     }
 
     public function loginsuccess($checklogin)
     {
         if($checklogin>0){
-
-        return view('puppy.index');
+        echo $checklogin;
     }
+        else echo 'fail';
     }
 
     public function register()
