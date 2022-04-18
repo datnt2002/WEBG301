@@ -3,13 +3,16 @@
     <form action="{{route('puppy.store')}}" method="post">
         @csrf
         <div class="form-group">
+            <input type="hidden" id="simpleinput" class="form-control" name="Pid">
+        </div>
+        <div class="form-group">
             <label for="simpleinput">Name</label>
             <input type="text" id="simpleinput" class="form-control" name="name">
-        @error('name')
+            @error('name')
             <div class="alert alert-warning" role="alert">
                 <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
             </div>
-        @enderror
+            @enderror
         </div>
         <div class="form-group">
             <label for="simpleinput">Area</label>
@@ -23,13 +26,13 @@
         <div class="form-group">
             <label for="example-select">Breed</label>
             <select class="form-control" id="example-select" name="Breed">
+                <option value="">Choose</option>
                 @foreach($breed as $each)
-                    <option value="">Choose </option>
                     <option value=" {{ $each->id}}">{{$each->bread}}</option>
                 @endforeach
             </select>
             <div>
-{{--                {{dd($breed)}}--}}
+                {{--                {{dd($breed)}}--}}
             </div>
             @error('Breed')
             <div class="alert alert-warning" role="alert">

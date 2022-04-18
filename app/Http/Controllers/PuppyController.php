@@ -31,7 +31,7 @@ class PuppyController extends Controller
     {
         $this->validation($rq)->validate();
         $pet = [
-            'name' => $rq->name,
+            'name' => $rq->input('name'),
             'area' => $rq->area,
             'breed' => $rq->Breed,
             'gender' => $rq->gender,
@@ -58,10 +58,21 @@ class PuppyController extends Controller
         ]);
     }
 
-//    public function update($id)
-//    {
-//PuppyRepos::
-//    }
+    public function update(Request $rq, $id)
+    {
+        $this->validation($rq)->validate();
+        $pet = [
+            'id'=>$rq->input('Pid'),
+            'name' => $rq->input('name'),
+            'area' => $rq->input('area'),
+            'breed' => $rq->input('Breed'),
+            'gender' => $rq->input('gender'),
+            'image' => $rq->input('image'),
+            'color' => $rq->input('color'),
+            'detail' => $rq->input('detail')
+        ];
+        PuppyRepos::update($id,$pet);
+    }
 
 
     private function validation($rq)
@@ -72,8 +83,8 @@ class PuppyController extends Controller
             'Breed' => ['required'],
             'gender' => ['required'],
             'image' => ['required'],
-            'color'=>['required'],
-            'detail'=>['required']
+            'color' => ['required'],
+            'detail' => ['required']
         ]);
     }
 }

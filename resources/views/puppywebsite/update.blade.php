@@ -1,6 +1,6 @@
 @extends('PuppyWebsiteMaster.PuppyMaster')
 @section('main')
-    <form action="{{route('puppy.store')}}" method="post">
+    <form action="{{route('puppy.update',['id'=> $pets[0]->Pid])}}" method="post">
         @csrf
 @foreach($pets as $pet)
         <div class="form-group">

@@ -15,11 +15,13 @@ Route::post('/login', [
 
 Route::prefix('homepage')->group(function () {
     Route::get('/', [PuppyController::class, 'index'])->name('puppy.index');
-    Route::get('/create',[PuppyController::class,'create'])->name('puppy.create');
-    Route::post('/create',[PuppyController::class,'store'])->name('puppy.store');
+    Route::get('/create', [PuppyController::class, 'create'])->name('puppy.create');
+    Route::post('/create', [PuppyController::class, 'store'])->name('puppy.store');
     Route::get('/delete/{id}', [PuppyController::class, 'confirm'])->name('puppy.confirm');
-    Route::get('/update/{id}',[PuppyController::class,'edit'])->name('puppy.edit');
+    Route::get('/update/{id}', [PuppyController::class, 'edit'])->name('puppy.edit');
     Route::post('/update/{id}', [PuppyController::class, 'update'])->name('puppy.update');
+    Route::get('/delete/{id}', [PuppyController::class, 'confirm'])->name('puppy.confirm');
+    Route::post('/delete/{id}', [PuppyController::class, 'delete'])->name('puppy.delete');
 });
 
 Route::get('/register', [
