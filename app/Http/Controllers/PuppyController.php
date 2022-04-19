@@ -86,7 +86,7 @@ class PuppyController extends Controller
     private function validation($rq)
     {
         return Validator::make($rq->all(), [
-            'name' => ['required'],
+            'name' => ['required','min:10'],
             'area' => ['required'],
             'Breed' => ['required'],
             'gender' => ['required'],
