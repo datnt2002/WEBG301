@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PuppyController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserAuthController;
 
@@ -28,3 +29,6 @@ Route::get('/register', [
     'uses' => 'App\Http\Controllers\RegisterController@index',
     'as' => 'user.register'
 ]);
+Route::post('/register', [
+    RegisterController::class, 'storeAccount'])->name('user.store');
+

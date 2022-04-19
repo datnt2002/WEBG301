@@ -32,7 +32,7 @@ class PuppyRepos
 
     }
 
-    public function Store($pet)
+    public static function Store($pet)
     {
         DB::table('puppy')->insert([
             'name' => $pet['name'],

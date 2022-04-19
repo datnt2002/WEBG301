@@ -30,6 +30,16 @@ class Puppy extends Migration
         Schema::table('puppy', function (Blueprint $table) {
             $table->foreign('breedsID')->references('id')->on('breeds');
         });
+        Schema::create('users', function (Blueprint $table) {
+            $table->increments('Cid');
+            $table->string('customer_name', 50);
+            $table->string('email');
+            $table->string('address');
+            $table->boolean('gender');
+            $table->string('username')->unique();
+            $table->string('Password');
+            $table->rememberToken();
+        });
     }
 
     /**
@@ -39,6 +49,6 @@ class Puppy extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('puppy');
     }
 }
