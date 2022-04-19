@@ -45,9 +45,9 @@ class PuppyRepos
         ]);
     }
 
-    public static function Update($id,$pet)
+    public static function Update($id, $pet)
     {
-        DB::table('puppy')->where('Pid','=',$id)->update([
+        DB::table('puppy')->where('Pid', '=', $id)->update([
             'name' => $pet['name'],
             'gender' => $pet['gender'],
             'area' => $pet['area'],
@@ -56,5 +56,10 @@ class PuppyRepos
             'color' => $pet['color'],
             'image' => $pet['image']
         ]);
+    }
+
+    public static function Delete($id)
+    {
+        DB::table('puppy')->where('Pid', '=', $id)->delete();
     }
 }

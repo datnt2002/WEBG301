@@ -22,8 +22,19 @@ class PuppyController extends Controller
         $breed = PuppyRepos::GetAllBreeds();
 
         return view('puppywebsite.create', [
-            'breed' => $breed
-        ]);
+                'breed' => $breed,
+                'pet' => (object) [
+                    'Pid' => '',
+                    'name' => '',
+                    'area' => '',
+                    'breedID' => '',
+                    'image' => '',
+                    'color' => '',
+                    'detail' => '',
+                ],
+                'breed' => $breed
+            ]
+        );
 
     }
 
@@ -62,7 +73,7 @@ class PuppyController extends Controller
     {
         $this->validation($rq)->validate();
         $pet = [
-            'id'=>$rq->input('Pid'),
+            'id' => $rq->input('Pid'),
             'name' => $rq->input('name'),
             'area' => $rq->input('area'),
             'breed' => $rq->input('Breed'),
@@ -71,8 +82,8 @@ class PuppyController extends Controller
             'color' => $rq->input('color'),
             'detail' => $rq->input('detail')
         ];
-        PuppyRepos::update($id,$pet);
-       return redirect()->route('puppy.index');
+        PuppyRepos::update($id, $pet);
+        return redirect()->route('puppy.index');
     }
 
 
@@ -87,5 +98,11 @@ class PuppyController extends Controller
             'color' => ['required'],
             'detail' => ['required']
         ]);
+    }
+
+    public function delete($id)
+    {
+        PuppyRepos::delete($id);
+        return redirect()->Route('puppy.index');
     }
 }

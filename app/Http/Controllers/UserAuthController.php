@@ -31,13 +31,7 @@ class UserAuthController extends Controller
 
     }
 
-    public function loginsuccess($checklogin)
-    {
-        if($checklogin>0){
-        echo $checklogin;
-    }
-        else echo 'fail';
-    }
+
 
     public function register()
     {
