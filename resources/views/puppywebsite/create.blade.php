@@ -5,7 +5,7 @@
         <div class="content-page">
             <form action="{{route('puppy.store')}}" method="post">
                 @csrf
-@include('puppywebsite.InputField')
+                @include('puppywebsite.InputField')
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
