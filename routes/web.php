@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PuppyController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserAuthController;
 
@@ -21,8 +22,12 @@ Route::post('/register', [
     RegisterController::class, 'storeAccount'
 ])->name('user.store');
 
+Route::get('', [
+    UserAuthController::class, 'logout'
+])->name('user.logout');
+
 Route::prefix('homepage')->group(function () {
-    Route::get('/', [PuppyController::class, 'index'])->name('puppy.index');
+    Route::get('/', [PuppyController::class, 'index'])->name('puppy.index')->middleware('loginAdmin');
     Route::get('/create', [PuppyController::class, 'create'])->name('puppy.create');
     Route::post('/create', [PuppyController::class, 'store'])->name('puppy.store');
     Route::get('/delete/{id}', [PuppyController::class, 'confirm'])->name('puppy.confirm');
@@ -31,6 +36,7 @@ Route::prefix('homepage')->group(function () {
     Route::get('/delete/{id}', [PuppyController::class, 'confirm'])->name('puppy.confirm');
     Route::post('/delete/{id}', [PuppyController::class, 'delete'])->name('puppy.delete');
 });
+
 Route::prefix('Main')->group(function () {
     Route::get('/',[UserController::class,'index'])->name('user.index');
 });
