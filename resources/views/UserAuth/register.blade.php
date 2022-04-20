@@ -23,9 +23,8 @@
                                                 <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
                                             </div>
                                             @enderror
-
                                         </div>
-                                        @enderror
+                                        
                                     </div>
                                     <div class="col-md-6 mb-4">
 
