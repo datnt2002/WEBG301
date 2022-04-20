@@ -13,13 +13,17 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-4">
                                         <div class="form-outline">
-                                            <label class="form-label" for="fullName">Full Name</label>
+
                                             <input type="text" id="fullName" name="fullName"
-                                                   class="form-control form-control-lg" value=""/>
-                                        </div>
-                                        @error('fullName')
-                                        <div class="alert alert-warning" role="alert">
-                                            <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
+                                                   class="form-control form-control-lg"
+                                                   value="{{old('fullName') ?? $user->fullName}}"/>
+                                            <label class="form-label" for="fullName">Full Name</label>
+                                            @error('fullName')
+                                            <div class="alert alert-warning" role="alert">
+                                                <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
+                                            </div>
+                                            @enderror
+
                                         </div>
                                         @enderror
                                     </div>
@@ -27,8 +31,14 @@
 
                                         <div class="form-outline">
                                             <input type="email" id="email" name="email"
-                                                   class="form-control form-control-lg"/>
+                                                   class="form-control form-control-lg"
+                                                   value="{{old('email') ?? $user->email}}"/>
                                             <label class="form-label" for="email">Email</label>
+                                            @error('email')
+                                            <div class="alert alert-warning" role="alert">
+                                                <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
+                                            </div>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -38,49 +48,35 @@
 
                                         <div class="form-outline">
                                             <input
-                                                type="text"
+                                                type="text" name="address"
                                                 class="form-control form-control-lg"
                                                 id="address"
+                                                value="{{old('address') ?? $user->address}}"
                                             />
                                             <label for="address" class="form-label">Address</label>
+                                            @error('address')
+                                            <div class="alert alert-warning" role="alert">
+                                                <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
+                                            </div>
+                                            @enderror
                                         </div>
 
                                     </div>
                                     <div class="col-md-6 mb-4">
-                                        <h6 class="mb-2 pb-1">Gender: </h6>
-                                        <div class="form-check form-check-inline">
-                                            <input
-                                                class="form-check-input"
-                                                type="radio"
-                                                name="inlineRadioOptions"
-                                                id="femaleGender"
-                                                value="1"
-                                                checked
-                                            />
-                                            <label class="form-check-label" for="femaleGender">Female</label>
-                                        </div>
 
-                                        <div class="form-check form-check-inline">
-                                            <input
-                                                class="form-check-input"
-                                                type="radio"
-                                                name="inlineRadioOptions"
-                                                id="maleGender"
-                                                value="2"
-                                            />
-                                            <label class="form-check-label" for="maleGender">Male</label>
+                                        <select name="gender" id="gender" class="form-control" >
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <label class="form-label" for="gender">Gender</label>
+                                        @error('gender')
+                                        <div class="alert alert-warning" role="alert">
+                                            <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
                                         </div>
+                                        @enderror
 
-                                        <div class="form-check form-check-inline">
-                                            <input
-                                                class="form-check-input"
-                                                type="radio"
-                                                name="inlineRadioOptions"
-                                                id="otherGender"
-                                                value="6"
-                                            />
-                                            <label class="form-check-label" for="otherGender">Other</label>
-                                        </div>
+
                                     </div>
                                 </div>
 
@@ -88,15 +84,27 @@
                                     <div class="col-md-6 mb-4 pb-2">
                                         <div class="form-outline">
                                             <input type="text" id="username" name="username"
-                                                   class="form-control form-control-lg"/>
+                                                   class="form-control form-control-lg"
+                                                   value="{{old('username') ?? $user->username}}"/>
                                             <label class="form-label" for="username">Username</label>
+                                            @error('username')
+                                            <div class="alert alert-warning" role="alert">
+                                                <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
+                                            </div>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-4 pb-2">
                                         <div class="form-outline">
                                             <input type="password" id="password" name="password"
-                                                   class="form-control form-control-lg"/>
+                                                   class="form-control form-control-lg"
+                                                   value="{{old('password') ?? $user->password}}"/>
                                             <label class="form-label" for="password">Password</label>
+                                            @error('password')
+                                            <div class="alert alert-warning" role="alert">
+                                                <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
+                                            </div>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
