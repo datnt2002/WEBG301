@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PuppyController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserAuthController;
 
@@ -12,6 +13,13 @@ Route::post('/login', [
     //    UserAuthController::class,'login',
     'as' => 'user.login'
 ]);
+Route::get('/register', [
+    'uses' => 'App\Http\Controllers\RegisterController@index',
+    'as' => 'user.register'
+]);
+Route::post('/register', [
+    RegisterController::class, 'storeAccount'
+])->name('user.store');
 
 Route::prefix('homepage')->group(function () {
     Route::get('/', [PuppyController::class, 'index'])->name('puppy.index');
@@ -23,8 +31,7 @@ Route::prefix('homepage')->group(function () {
     Route::get('/delete/{id}', [PuppyController::class, 'confirm'])->name('puppy.confirm');
     Route::post('/delete/{id}', [PuppyController::class, 'delete'])->name('puppy.delete');
 });
+Route::prefix('Main')->group(function () {
+    Route::get('/',[UserController::class,'index'])->name('user.index');
+});
 
-Route::get('/register', [
-    'uses' => 'App\Http\Controllers\RegisterController@index',
-    'as' => 'user.register'
-]);

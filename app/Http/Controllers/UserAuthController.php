@@ -31,23 +31,15 @@ class UserAuthController extends Controller
 
     }
 
-
-
-    public function register()
-    {
-        return 'register';
-    }
-
     private function checklogin($rq)
     {
         return validator::make(
             $rq->all(),
             [
-                'username' => ['required', 'email'],
+                'username' => ['required'],
                 'password' => ['required', 'min:8'],
             ],
             [
-                'username.email' => 'email must include @',
                 'username.required' => 'email cannot be empty!!!',
                 'password.required' => 'password cannot be empty',
                 'password.min' => 'password must have at least 8 character'
