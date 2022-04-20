@@ -12,14 +12,19 @@ class UserAuth
 
     public static function login($username, $password)
     {
-        return DB::table('userr')->where(['Username' => $username, 'Password' => $password])->count();
+        return DB::table('users')->where(['username' => $username, 'password' => $password])->count();
 
     }
+//    public static function loginAdmin($username, $password)
+//    {
+//        return DB::table('admin')->where(['username' => $username, 'password' => $password])->count();
+//
+//    }
 
     public static function store($users)
     {
         DB::table('users')->insert([
-            'name' => $users['name'],
+            'customer_name' => $users['fullName'],
             'email' => $users['email'],
             'address' => $users['address'],
             'gender' => $users['gender'],

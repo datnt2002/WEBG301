@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repository\UserAuth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -14,21 +15,29 @@ class UserAuthController extends Controller
         return view('UserAuth.index');
     }
 
-    public function login(Request $rq)
+    public function login(Request $request)
     {
-        $validation = $this->checklogin($rq);
+        $validation = $this->checklogin($request);
         if ($validation->fails()) {
             return redirect()->back()->withErrors($validation)->withInput();
         } else {
-            $username = $rq->input('username');
-            $password = $rq->input('password');
+            $username = $request->input('username');
+            $password = $request->input('password');
         }
-       $checklogin =  UserAuth::login($username, $password);
-        if($checklogin>0){
-            return redirect()->Route('puppy.index');
-        }
-        else return redirect()->back();
 
+        $checklogin = UserAuth::login($username, $password);
+        if ($checklogin > 0) {
+            Session::put('username', $request->input('username'));
+            return redirect()->Route('puppy.index');
+        } else return redirect()->back();
+
+    }
+
+    public function logout(){
+        if (Session::has('username')) {
+            Session::forget('username');
+        }
+        return redirect()->route('user.login');
     }
 
     private function checklogin($rq)
