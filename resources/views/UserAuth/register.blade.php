@@ -8,15 +8,20 @@
                     <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
                         <div class="card-body p-4 p-md-5">
                             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5" style="text-align: center">Sign up</h3>
-                            <form action="{{route('user.register')}}" method="post">
+                            <form action="{{route('user.store')}}" method="post">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-6 mb-4">
                                         <div class="form-outline">
-                                            <input type="text" id="fullName" name="fullName"
-                                                   class="form-control form-control-lg"/>
                                             <label class="form-label" for="fullName">Full Name</label>
+                                            <input type="text" id="fullName" name="fullName"
+                                                   class="form-control form-control-lg" value=""/>
                                         </div>
+                                        @error('fullName')
+                                        <div class="alert alert-warning" role="alert">
+                                            <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
+                                        </div>
+                                        @enderror
                                     </div>
                                     <div class="col-md-6 mb-4">
 

@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('css/icons.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/app-modern.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/app-modern-dark.min.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('css/app-modern-dark.min.css')}}">--}}
     @yield('css')
     <title>Document</title>
 </head>
-<body>
+<body class="loading" data-layout="detached" data-layout-config='{"leftSidebarCondensed":false,"darkMode":false, "showRightSidebarOnStart": true}'>
 <header>
     @yield('header')
 </header>
