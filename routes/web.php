@@ -33,9 +33,14 @@ Route::prefix('homepage')->group(function () {
     Route::post('/update/{id}', [PuppyController::class, 'update'])->name('puppy.update');
     Route::get('/delete/{id}', [PuppyController::class, 'confirm'])->name('puppy.confirm');
     Route::post('/delete/{id}', [PuppyController::class, 'delete'])->name('puppy.delete');
+
+//    Route::group('account')->group(function (){
+//
+//    });
 });
 
 Route::prefix('Main')->group(function () {
     Route::get('/', [Usercontroller::class, 'index'])->name('user.view');
 });
 
+Route::get('/account', [RegisterController::class, 'userAccount'])->name('user.account');

@@ -34,12 +34,12 @@
 
                                 <li class="side-nav-title side-nav-item">Apps</li>
 
-{{--                                <li class="side-nav-item">--}}
-{{--                                    <a href="apps-calendar.html" class="side-nav-link">--}}
-{{--                                        <i class="uil-calender"></i>--}}
-{{--                                        <span> Calendar </span>--}}
-{{--                                    </a>--}}
-{{--                                </li>--}}
+                                <li class="side-nav-item">
+                                    <a href="{{route('user.account')}}" class="side-nav-link">
+                                        <i class="uil-calender"></i>
+                                        <span> Customers </span>
+                                    </a>
+                                </li>
 
 {{--                                <li class="side-nav-item">--}}
 {{--                                    <a href="apps-chat.html" class="side-nav-link">--}}

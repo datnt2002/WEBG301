@@ -9,6 +9,13 @@ use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
+    public function userAccount(){
+        $users = UserAuth::GetAllAccount();
+        return view('puppywebsite.accountUser.userAccount', [
+            'users' => $users,
+        ]);
+    }
+
     public function index(){
         return view('UserAuth.register',[
             'user'=>(object)[
@@ -49,5 +56,7 @@ class RegisterController extends Controller
             ]
         );
     }
+
+
 
 }

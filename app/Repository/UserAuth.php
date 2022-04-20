@@ -8,7 +8,10 @@ use App\Http\Controllers\UserAuthController;
 
 class UserAuth
 {
-
+    public static function GetAllAccount(){
+        $users = DB::table('users')->select('users.*')->get();
+        return $users;
+    }
 
     public static function login($username, $password)
     {
