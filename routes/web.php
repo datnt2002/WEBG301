@@ -49,3 +49,4 @@ Route::prefix('Main')->group(function () {
 });
 
 Route::get('/account', [RegisterController::class, 'userAccount'])->name('user.account');
+Route::get('/admin', [RegisterController::class, 'adminAccount'])->name('user.account');

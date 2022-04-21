@@ -41,12 +41,12 @@
                                     </a>
                                 </li>
 
-{{--                                <li class="side-nav-item">--}}
-{{--                                    <a href="apps-chat.html" class="side-nav-link">--}}
-{{--                                        <i class="uil-comments-alt"></i>--}}
-{{--                                        <span> Chat </span>--}}
-{{--                                    </a>--}}
-{{--                                </li>--}}
+                                <li class="side-nav-item">
+                                    <a href="{{route('user.admin')}}" class="side-nav-link">
+                                        <i class="uil-comments-alt"></i>
+                                        <span> Admin </span>
+                                    </a>
+                                </li>
 
 {{--                                <li class="side-nav-item">--}}
 {{--                                    <a href="javascript: void(0);" class="side-nav-link">--}}

@@ -10,24 +10,24 @@
             <div class="content-page">
                 <div class="content">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-body">
+                        <div class="col-lg-12" >
+                            <div class="card" >
+                                <div class="card-body" >
 
-                                    <div id="carouselExampleControls" class="carousel slide " style=""
-                                         data-ride="carousel">
-                                        <div class="carousel-inner" role="listbox">
+                                    <div id="carouselExampleControls" class="carousel slide "
+                                         data-ride="carousel" style="height: 500px">
+                                        <div class="carousel-inner" role="listbox" style="height: 500px; width: 100%">
                                             <div class="carousel-item active">
                                                 <img class="d-block img-fluid mx-auto"
-                                                     src="{{asset('/images/small-1.jpg')}}" alt="First slide">
+                                                     src="{{asset('/images/puppy_images/Amethyst.jpg')}}" alt="First slide">
                                             </div>
                                             <div class="carousel-item">
                                                 <img class="d-block img-fluid mx-auto"
-                                                     src="{{asset('/images/small-1.jpg')}}" alt="Second slide">
+                                                     src="{{asset('/images/puppy_images/jiggly.jpg')}}" alt="Second slide">
                                             </div>
                                             <div class="carousel-item">
                                                 <img class="d-block img-fluid mx-auto"
-                                                     src="{{asset('/images/small-1.jpg')}}" alt="Third slide">
+                                                     src="{{asset('/images/puppy_images/Rudolph.jpg')}}" alt="Third slide">
                                             </div>
                                         </div>
                                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
@@ -51,7 +51,7 @@
                                 <div class="card d-block">
                                     <!-- project-thumbnail -->
                                     <img class="card-img-top" src="{{$each->image}}"
-                                         alt="project image cap">
+                                         alt="project image cap" style="height: 300px; width:100%">
 
                                     <div class="card-body position-relative">
                                         <!-- project title-->
