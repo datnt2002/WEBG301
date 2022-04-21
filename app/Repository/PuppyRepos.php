@@ -29,7 +29,6 @@ class PuppyRepos
     public static function GetPetByID($id)
     {
         return DB::table('puppy')->where('pid', '=', $id)->get();
-
     }
 
     public static function Store($pet)
@@ -44,6 +43,7 @@ class PuppyRepos
             'image' => $pet['image']
         ]);
     }
+
     public static function StoreBreed($Breed){
         DB::table('breeds')->insert([
             'bread'=>$Breed['breed']
