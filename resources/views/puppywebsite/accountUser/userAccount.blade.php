@@ -8,11 +8,11 @@
 @include('partials.LeftNav');
 
     <div class="container-fluid">
-        <div class="content-page">
+        <div class="content-page" style="padding: 0 0 100px 0 ">
             <div class="content">
 
                 <div class="container-fluid">
-
+                    <h1>Customers Management</h1>
                     <table class="table table-striped table-centered mb-0 ">
                         <thead>
                         <tr>
@@ -35,12 +35,16 @@
                                 <td>{{$user->gender}}</td>
                                 <td>{{$user->username}}</td>
                                 <td>**************</td>
-{{--                                <td class="table-action">--}}
-{{--                                    <a href="{{route('user.edit',['id'=>$user->Cid])}}" class="action-icon">--}}
-{{--                                        <i class="mdi mdi-pencil"></i></a>--}}
-{{--                                    <a href="{{route('user.confirm',['id'=>$user->Cid])}}" class="action-icon">--}}
-{{--                                        <i class="mdi mdi-delete"></i></a>--}}
-{{--                                </td>--}}
+                                <td class="table-action">
+                                    <a
+{{--                                        href="{{route('user.edit',['id'=>$user->Cid])}}" --}}
+                                       class="action-icon">
+                                        <i class="mdi mdi-pencil"></i></a>
+                                    <a
+{{--                                        href="{{route('user.confirm',['id'=>$user->Cid])}}" --}}
+                                        class="action-icon">
+                                        <i class="mdi mdi-delete"></i></a>
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>

@@ -50,6 +50,7 @@ class PuppyController extends Controller
 
     public function storeBreed(Request $rq)
     {
+//        $this->validationBreed($rq)->validate();
         $Breed = [
             'breed' => $rq->input('breed')
         ];
@@ -114,6 +115,13 @@ class PuppyController extends Controller
             'detail' => ['required']
         ]);
     }
+
+//    private function validationBreed($rq)
+//    {
+//        return Validator::make($rq->all(), [
+//            'breed' => ['required'],
+//        ]);
+//    }
 
     public function confirm($id)
     {

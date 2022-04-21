@@ -1,12 +1,27 @@
-@extends('PuppyWebsiteMaster.PuppyMaster');
+@extends('PuppyWebsiteMaster.PuppyMaster')
+@section('css')
+    <link rel="stylesheet" href="{{asset('css/vendor/dataTables.bootstrap4.css')}}">
+    <link rel="stylesheet" href="{{asset('css/vendor/responsive.bootstrap4.css')}}">
+@endsection
+@include('partials.adminNav');
+@include('partials.LeftNav');
 @section('main')
-    <div class="form-group">
-        <label>Breed</label>
-        <form action="{{Route('puppy.storeBreed')}}" method="POST">
-            @csrf
-            <input type="text" class="form-control" maxlength="25" data-toggle="maxlength" name="breed"
-                   value="{{$Breed->breed }}">
-            <button type="submit" class="btn btn-outline-primary">Save</button>
-        </form>
-    </div>
+    <div class="container-fluid">
+        <div class="content-page" style="padding: 0 20px 100px 20px">
+            <h1>Add New Breed</h1>
+            <form action="{{Route('puppy.storeBreed')}}" method="POST">
+                @csrf
+                <div class="form-group">
+                    <label for="simpleinput">Breed</label>
+                    <input type="text" class="form-control"  name="breed" id="simpleinput"
+                           value="{{$Breed->breed }}">
+{{--                    @error('breed')--}}
+{{--                    <div class="alert alert-warning" role="alert">--}}
+{{--                        <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>--}}
+{{--                    </div>--}}
+{{--                    @enderror--}}
+                    <button type="submit" class="btn btn-primary" style="border-radius: 15px">Submit</button>
+
+            </form>
+        </div>
 @endsection

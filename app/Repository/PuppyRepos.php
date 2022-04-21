@@ -44,9 +44,10 @@ class PuppyRepos
         ]);
     }
 
-    public static function StoreBreed($Breed){
+    public static function StoreBreed($Breed)
+    {
         DB::table('breeds')->insert([
-            'bread'=>$Breed['breed']
+            'bread' => $Breed['breed']
         ]);
     }
 

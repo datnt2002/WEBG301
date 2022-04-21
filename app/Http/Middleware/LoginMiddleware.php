@@ -12,8 +12,8 @@ class LoginMiddleware
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
     public function handle(Request $request, Closure $next)
@@ -21,11 +21,11 @@ class LoginMiddleware
         $out = new \Symfony\Component\Console\Output\ConsoleOutput();
         $out->writeln(UserAuth::class);
 
-        if (!Session::has('username')){
+        if (!Session::has('username')) {
             $out->writeln('unauthenticated');
-            return redirect()->route('user.login');
+            return redirect()->route('admin.login');
         } else {
-            $out->writeln('authenticated: '.Session::get('username'));
+            $out->writeln('authenticated: ' . Session::get('username'));
         }
         return $next($request);
     }
