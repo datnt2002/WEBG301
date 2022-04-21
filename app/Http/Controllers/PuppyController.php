@@ -28,7 +28,7 @@ class PuppyController extends Controller
                     'name' => '',
                     'area' => '',
                     'breedID' => '',
-                    'image' => '',
+                    'image' => '/images/puppy_images/'.'',
                     'color' => '',
                     'detail' => '',
                 ],
@@ -65,7 +65,7 @@ class PuppyController extends Controller
             'area' => $rq->area,
             'breed' => $rq->Breed,
             'gender' => $rq->gender,
-            'image' => $rq->image,
+            'image' => '/images/puppy_images/'.$rq->image,
             'color' => $rq->color,
             'detail' => $rq->detail
         ];
@@ -93,7 +93,7 @@ class PuppyController extends Controller
             'area' => $rq->input('area'),
             'breed' => $rq->input('Breed'),
             'gender' => $rq->input('gender'),
-            'image' => $rq->input('image'),
+            'image' => '/images/puppy_images/'.$rq->input('image'),
             'color' => $rq->input('color'),
             'detail' => $rq->input('detail')
         ];

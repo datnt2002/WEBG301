@@ -60,7 +60,7 @@
     </div>
     <div class="form-group">
         <label for="simpleinput">image</label>
-        <input type="text" id="simpleinput" class="form-control" name="image"
+        <input type="file" id="simpleinput" class="form-control" name="image"
                value="{{old('image') ?? $pet->image }}">
         @error('image')
         <div class="alert alert-warning" role="alert">
