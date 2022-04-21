@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Repository\User;
 use Illuminate\Http\Request;
 
@@ -13,6 +14,12 @@ class Usercontroller extends Controller
             'pets' => $pets
         ]);
 
+    }
+
+    public function GetPetById($id)
+    {
+        $pet = User::GetPetByID($id);
+        return view('UserView.Detail', ['pet' => $pet]);
     }
 
 }

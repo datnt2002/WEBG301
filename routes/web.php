@@ -28,6 +28,10 @@ Route::prefix('homepage')->group(function () {
     Route::get('/', [PuppyController::class, 'index'])->name('puppy.index')->middleware('loginAdmin');
     Route::get('/create', [PuppyController::class, 'create'])->name('puppy.create');
     Route::post('/create', [PuppyController::class, 'store'])->name('puppy.store');
+
+    Route::get('/createBreed', [PuppyController::class, 'createBreed'])->name('puppy.createBreed');
+    Route::post('/createBreed', [PuppyController::class, 'storeBreed'])->name('puppy.storeBreed');
+
     Route::get('/delete/{id}', [PuppyController::class, 'confirm'])->name('puppy.confirm');
     Route::get('/update/{id}', [PuppyController::class, 'edit'])->name('puppy.edit');
     Route::post('/update/{id}', [PuppyController::class, 'update'])->name('puppy.update');
@@ -41,6 +45,7 @@ Route::prefix('homepage')->group(function () {
 
 Route::prefix('Main')->group(function () {
     Route::get('/', [Usercontroller::class, 'index'])->name('user.view');
+    Route::get('/Detail/{id}', [Usercontroller::class, 'GetPetById'])->name('Pet.Detail');
 });
 
 Route::get('/account', [RegisterController::class, 'userAccount'])->name('user.account');

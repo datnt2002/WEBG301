@@ -3,9 +3,9 @@
     <link rel="stylesheet" href="{{asset('css/vendor/dataTables.bootstrap4.css')}}">
     <link rel="stylesheet" href="{{asset('css/vendor/responsive.bootstrap4.css')}}">
 @endsection
+@section('main')
 @include('partials.adminNav')
 @include('partials.LeftNav');
-@section('main')
 
     <div class="container-fluid">
         <div class="content-page">
@@ -34,7 +34,7 @@
                                 <td>{{$user->address}}</td>
                                 <td>{{$user->gender}}</td>
                                 <td>{{$user->username}}</td>
-                                <td>{{$user->password}}</td>
+                                <td>**************</td>
 {{--                                <td class="table-action">--}}
 {{--                                    <a href="{{route('user.edit',['id'=>$user->Cid])}}" class="action-icon">--}}
 {{--                                        <i class="mdi mdi-pencil"></i></a>--}}

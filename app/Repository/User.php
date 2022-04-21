@@ -12,4 +12,7 @@ class User
             ->select('puppy.*',
                 'breeds.*')->get();
     }
+    public static function GetPetByID($id){
+        return DB::table('puppy')->where('Pid','=',$id)->get();
+    }
 }

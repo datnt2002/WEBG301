@@ -3,18 +3,20 @@
     <link rel="stylesheet" href="{{asset('css/vendor/dataTables.bootstrap4.css')}}">
     <link rel="stylesheet" href="{{asset('css/vendor/responsive.bootstrap4.css')}}">
 @endsection
+@section('main')
 @include('partials.adminNav')
 @include('partials.LeftNav');
-@section('main')
 
     <div class="container-fluid">
         <div class="content-page">
             <div class="content">
 
                 <div class="container-fluid">
-                <button type="button" class="btn btn-success btn-rounded">
-                    <a href="{{Route('puppy.create')}}">ADD</a>
-                </button>
+                    <div class="col-sm-4">
+                        <a href="{{Route('puppy.create')}}" class="btn btn-danger mb-2"><i class="mdi mdi-plus-circle mr-2"></i> Add Puppy</a>
+                        <a href="{{Route('puppy.createBreed')}}" class="btn btn-danger mb-2"><i class="mdi mdi-plus-circle mr-2"></i> Add Breed</a>
+                    </div>
+
                     <table class="table table-striped table-centered mb-0 ">
                         <thead>
                         <tr>

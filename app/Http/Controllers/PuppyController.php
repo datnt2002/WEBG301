@@ -23,7 +23,7 @@ class PuppyController extends Controller
 
         return view('puppywebsite.create', [
                 'breed' => $breed,
-                'pet' => (object)[
+                'pet' => (object) [
                     'Pid' => '',
                     'name' => '',
                     'area' => '',
@@ -32,10 +32,29 @@ class PuppyController extends Controller
                     'color' => '',
                     'detail' => '',
                 ],
-                'breed' => $breed
+//                'breed' => $breed
             ]
         );
+    }
 
+    public function createBreed()
+    {
+        return view('puppywebsite.createBreed', [
+
+            'Breed' => (object) [
+                'breed' => ''
+            ]
+        ]
+        );
+    }
+
+    public function storeBreed(Request $rq)
+    {
+        $Breed = [
+            'breed' => $rq->input('breed')
+        ];
+        PuppyRepos::StoreBreed($Breed);
+        return redirect()->route('puppy.index');
     }
 
     public function store(Request $rq)
@@ -86,7 +105,7 @@ class PuppyController extends Controller
     private function validation($rq)
     {
         return Validator::make($rq->all(), [
-            'name' => ['required','min:10'],
+            'name' => ['required',],
             'area' => ['required'],
             'Breed' => ['required'],
             'gender' => ['required'],
