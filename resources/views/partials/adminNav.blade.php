@@ -182,7 +182,7 @@
                     </a>
 
                     <!-- item-->
-                    <a href="{{route('user.logout')}}" class="dropdown-item notify-item">
+                    <a href="{{route('admin.logout')}}" class="dropdown-item notify-item">
                         <i class="mdi mdi-logout mr-1"></i>
                         <span>Logout</span>
                     </a>

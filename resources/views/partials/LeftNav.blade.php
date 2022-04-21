@@ -42,7 +42,7 @@
                                 </li>
 
                                 <li class="side-nav-item">
-                                    <a href="{{route('user.admin')}}" class="side-nav-link">
+                                    <a href="{{route('admin.account')}}" class="side-nav-link">
                                         <i class="uil-comments-alt"></i>
                                         <span> Admin </span>
                                     </a>

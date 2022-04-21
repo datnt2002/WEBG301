@@ -43,7 +43,7 @@ class RegisterController extends Controller
 //        dd($users);
         UserAuth::store($users);
 
-        return redirect()->route('user.login');
+        return redirect()->route('admin.login');
     }
 
     private function validation($request){

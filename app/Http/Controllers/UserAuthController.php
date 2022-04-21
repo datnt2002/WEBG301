@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Repository\AdminRepos;
 use App\Repository\UserAuth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -37,7 +38,7 @@ class UserAuthController extends Controller
         if (Session::has('username')) {
             Session::forget('username');
         }
-        return redirect()->route('user.login');
+        return redirect()->route('admin.login');
     }
 
     private function checklogin($rq)

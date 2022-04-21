@@ -114,7 +114,7 @@
                                 </div>
 
                                 <div class="signup_link">
-                                    Have a account? <a href="{{route('user.login')}}">Sign in</a>
+                                    Have a account? <a href="{{route('admin.login')}}">Sign in</a>
                                 </div>
 
                             </form>

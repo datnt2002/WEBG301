@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PuppyController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
@@ -12,7 +13,7 @@ Route::get('/login', [
 Route::post('/login', [
     'uses' => 'App\Http\Controllers\UserAuthController@login',
     //    UserAuthController::class,'login',
-    'as' => 'user.login'
+    'as' => 'admin.login'
 ]);
 Route::get('/register', [
     'uses' => 'App\Http\Controllers\RegisterController@index',
@@ -22,7 +23,7 @@ Route::post('/register', [RegisterController::class, 'storeAccount'])->name('use
 
 Route::get('', [
     UserAuthController::class, 'logout'
-])->name('user.logout');
+])->name('admin.logout');
 
 Route::prefix('homepage')->group(function () {
     Route::get('/', [PuppyController::class, 'index'])->name('puppy.index')->middleware('loginAdmin');
@@ -49,4 +50,4 @@ Route::prefix('Main')->group(function () {
 });
 
 Route::get('/account', [RegisterController::class, 'userAccount'])->name('user.account');
-Route::get('/admin', [RegisterController::class, 'adminAccount'])->name('user.account');
+Route::get('/admin', [AdminController::class, 'adminAccount'])->name('admin.account');

@@ -13,16 +13,16 @@ class UserAuth
         return $users;
     }
 
-    public static function login($username, $password)
-    {
-        return DB::table('admin')->where(['username' => $username, 'password' => $password])->count();
-    }
+
     public static function loginCustomer($username, $password)
     {
         return DB::table('users')->where(['username' => $username, 'password' => $password])->count();
 
     }
-
+    public static function login($username, $password)
+    {
+        return DB::table('admin')->where(['username' => $username, 'password' => $password])->count();
+    }
     public static function store($users)
     {
         DB::table('users')->insert([

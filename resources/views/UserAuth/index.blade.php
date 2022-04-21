@@ -3,7 +3,7 @@
 @section('main')
     <div class="center">
         <h1>Login</h1>
-        <form method="post" action="{{route('user.login')}}">
+        <form method="post" action="{{route('admin.login')}}">
             @csrf
             <div class="txt_field">
                 <input type="text" name="username" id="username" value="{{old('username')}}">
