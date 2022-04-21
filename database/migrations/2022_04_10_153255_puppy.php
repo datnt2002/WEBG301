@@ -38,19 +38,17 @@ class Puppy extends Migration
             $table->string('gender');
             $table->string('username')->unique();
             $table->string('password');
-//            $table->integer('role');
-            $table->rememberToken();
+            $table->string('avatar')->nullable();
         });
-//        Schema::create('admin', function (Blueprint $table) {
-//            $table->increments('Aid');
-//            $table->string('name', 50);
-//            $table->string('email');
-//            $table->string('phone');
-//            $table->string('gender');
-//            $table->string('username')->unique();
-//            $table->string('password');
-//            $table->rememberToken();
-//        });
+        Schema::create('admin', function (Blueprint $table) {
+            $table->increments('Aid');
+            $table->string('name', 50);
+            $table->string('email');
+            $table->string('phone');
+            $table->string('gender');
+            $table->string('username')->unique();
+            $table->string('password');
+        });
     }
 
     /**

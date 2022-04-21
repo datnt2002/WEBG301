@@ -24,7 +24,7 @@
                                             </div>
                                             @enderror
                                         </div>
-                                        
+
                                     </div>
                                     <div class="col-md-6 mb-4">
 
