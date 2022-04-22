@@ -53,10 +53,8 @@ class RegisterController extends Controller
     public function editCustomer($id)
     {
         $users = UserAuth::GetUserByID($id);
-//        $breed = UserAuth::GetAllBreeds();
         return view('puppywebsite.accountUser.updateUser', [
             'users' => $users,
-//            'breed' => $breed
         ]);
     }
 

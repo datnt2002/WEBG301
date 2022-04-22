@@ -10,7 +10,6 @@
     <div class="container-fluid">
         <div class="content-page" style="padding: 0 0 100px 0">
             <div class="content">
-
                 <div class="container-fluid">
                     <h1>Admin Management</h1>
                     <table class="table table-striped table-centered mb-0 ">
