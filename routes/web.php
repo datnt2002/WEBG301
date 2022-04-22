@@ -27,6 +27,13 @@ Route::prefix('homepage')->group(function () {
 
     Route::prefix('customerManager')->group(function (){
         Route::get('/account', [RegisterController::class, 'userAccount'])->name('user.account');
+
+////        Route::get('/delete/{id}', [PuppyController::class, 'confirm'])->name('puppy.confirm');
+//        Route::get('/update/{id}', [RegisterController::class, 'editCustomer'])->name('user.edit');
+//        Route::post('/update/{id}', [RegisterController::class, 'updateCustomer'])->name('user.update');
+//        Route::get('/delete/{id}', [RegisterController::class, 'confirmCustomer'])->name('user.confirm');
+//        Route::post('/delete/{id}', [RegisterController::class, 'deleteCustomer'])->name('user.delete');
+
     });
     Route::get('/admin', [AdminController::class, 'adminAccount'])->name('admin.account');
 });
@@ -38,20 +45,12 @@ Route::prefix('Main')->group(function () {
 
 
 Route::prefix('userauth')->group(function (){
-    Route::get('/login', [
-        UserAuthController::class, 'index'
-    ]);
-    Route::post('/login', [
-        UserAuthController::class, 'login',
-    ])->name('admin.login');
+    Route::get('/login', [UserAuthController::class, 'index']);
+    Route::post('/login', [UserAuthController::class, 'login',])->name('admin.login');
 
-    Route::get('/register', [
-        RegisterController::class, 'index',
-    ])->name('user.register');
+    Route::get('/register', [RegisterController::class, 'index',])->name('user.register');
     Route::post('/register', [RegisterController::class, 'storeAccount'])->name('user.store');
 
-    Route::get('', [
-        UserAuthController::class, 'logout'
-    ])->name('admin.logout');
+    Route::get('', [UserAuthController::class, 'logout'])->name('admin.logout');
 });
 
