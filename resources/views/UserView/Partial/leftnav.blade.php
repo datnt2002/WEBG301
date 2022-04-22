@@ -1,595 +1,261 @@
-<div class="left-side-menu left-side-menu-detached mm-active">
+<div class="topnav shadow-sm">
+    <div class="container-fluid active">
+        <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
 
-    <div class="leftbar-user">
-        <a href="javascript: void(0);">
-            <img src="assets/images/users/avatar-1.jpg" alt="user-image" height="42" class="rounded-circle shadow-sm">
-            <span class="leftbar-user-name">Dominic Keller</span>
-        </a>
+            <div class="collapse navbar-collapse active" id="topnav-menu-content">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboards" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="uil-dashboard mr-1"></i>Dashboards <div class="arrow-down"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="topnav-dashboards">
+                            <a href="dashboard-analytics.html" class="dropdown-item">Analytics</a>
+                            <a href="dashboard-crm.html" class="dropdown-item">CRM</a>
+                            <a href="index.html" class="dropdown-item active">Ecommerce</a>
+                            <a href="dashboard-projects.html" class="dropdown-item">Projects</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-apps" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="uil-apps mr-1"></i>Apps <div class="arrow-down"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="topnav-apps">
+                            <a href="apps-calendar.html" class="dropdown-item">Calendar</a>
+                            <a href="apps-chat.html" class="dropdown-item">Chat</a>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-ecommerce" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ecommerce <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-ecommerce">
+                                    <a href="apps-ecommerce-products.html" class="dropdown-item">Products</a>
+                                    <a href="apps-ecommerce-products-details.html" class="dropdown-item">Products Details</a>
+                                    <a href="apps-ecommerce-orders.html" class="dropdown-item">Orders</a>
+                                    <a href="apps-ecommerce-orders-details.html" class="dropdown-item">Order Details</a>
+                                    <a href="apps-ecommerce-customers.html" class="dropdown-item">Customers</a>
+                                    <a href="apps-ecommerce-shopping-cart.html" class="dropdown-item">Shopping Cart</a>
+                                    <a href="apps-ecommerce-checkout.html" class="dropdown-item">Checkout</a>
+                                    <a href="apps-ecommerce-sellers.html" class="dropdown-item">Sellers</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-email" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Email <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-email">
+                                    <a href="apps-email-inbox.html" class="dropdown-item">Inbox</a>
+                                    <a href="apps-email-read.html" class="dropdown-item">Read Email</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-project" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Projects <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-project">
+                                    <a href="apps-projects-list.html" class="dropdown-item">List</a>
+                                    <a href="apps-projects-details.html" class="dropdown-item">Details</a>
+                                    <a href="apps-projects-gantt.html" class="dropdown-item">Gantt</a>
+                                    <a href="apps-projects-add.html" class="dropdown-item">Create Project</a>
+                                </div>
+                            </div>
+                            <a href="apps-social-feed.html" class="dropdown-item">Social Feed</a>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-tasks" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Tasks <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-tasks">
+                                    <a href="apps-tasks.html" class="dropdown-item">List</a>
+                                    <a href="apps-tasks-details.html" class="dropdown-item">Details</a>
+                                    <a href="apps-kanban.html" class="dropdown-item">Kanban Board</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="uil-copy-alt mr-1"></i>Pages <div class="arrow-down"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="topnav-pages">
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-auth" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Authenitication <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-auth">
+                                    <a href="pages-login.html" class="dropdown-item">Login</a>
+                                    <a href="pages-login-2.html" class="dropdown-item">Login 2</a>
+                                    <a href="pages-register.html" class="dropdown-item">Register</a>
+                                    <a href="pages-register-2.html" class="dropdown-item">Register 2</a>
+                                    <a href="pages-logout.html" class="dropdown-item">Logout</a>
+                                    <a href="pages-logout-2.html" class="dropdown-item">Logout 2</a>
+                                    <a href="pages-recoverpw.html" class="dropdown-item">Recover Password</a>
+                                    <a href="pages-recoverpw-2.html" class="dropdown-item">Recover Password 2</a>
+                                    <a href="pages-lock-screen.html" class="dropdown-item">Lock Screen</a>
+                                    <a href="pages-lock-screen-2.html" class="dropdown-item">Lock Screen 2</a>
+                                    <a href="pages-confirm-mail.html" class="dropdown-item">Confirm Mail</a>
+                                    <a href="pages-confirm-mail-2.html" class="dropdown-item">Confirm Mail 2</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-error" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Error <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-error">
+                                    <a href="pages-404.html" class="dropdown-item">Error 404</a>
+                                    <a href="pages-404-alt.html" class="dropdown-item">Error 404-alt</a>
+                                    <a href="pages-500.html" class="dropdown-item">Error 500</a>
+                                </div>
+                            </div>
+                            <a href="pages-starter.html" class="dropdown-item">Starter Page</a>
+                            <a href="pages-preloader.html" class="dropdown-item">With Preloader</a>
+                            <a href="pages-profile.html" class="dropdown-item">Profile</a>
+                            <a href="pages-profile-2.html" class="dropdown-item">Profile 2</a>
+                            <a href="pages-invoice.html" class="dropdown-item">Invoice</a>
+                            <a href="pages-faq.html" class="dropdown-item">FAQ</a>
+                            <a href="pages-pricing.html" class="dropdown-item">Pricing</a>
+                            <a href="pages-maintenance.html" class="dropdown-item">Maintenance</a>
+                            <a href="pages-timeline.html" class="dropdown-item">Timeline</a>
+                            <a href="landing.html" class="dropdown-item">Landing</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="uil-package mr-1"></i>Components <div class="arrow-down"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="topnav-components">
+                            <a href="widgets.html" class="dropdown-item">Widgets</a>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-ui-kit" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Base UI 1 <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-ui-kit">
+                                    <a href="ui-accordions.html" class="dropdown-item">Accordions</a>
+                                    <a href="ui-alerts.html" class="dropdown-item">Alerts</a>
+                                    <a href="ui-avatars.html" class="dropdown-item">Avatars</a>
+                                    <a href="ui-badges.html" class="dropdown-item">Badges</a>
+                                    <a href="ui-breadcrumb.html" class="dropdown-item">Breadcrumb</a>
+                                    <a href="ui-buttons.html" class="dropdown-item">Buttons</a>
+                                    <a href="ui-cards.html" class="dropdown-item">Cards</a>
+                                    <a href="ui-carousel.html" class="dropdown-item">Carousel</a>
+                                    <a href="ui-dropdowns.html" class="dropdown-item">Dropdowns</a>
+                                    <a href="ui-embed-video.html" class="dropdown-item">Embed Video</a>
+                                    <a href="ui-grid.html" class="dropdown-item">Grid</a>
+                                    <a href="ui-list-group.html" class="dropdown-item">List Group</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-ui-kit2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Base UI 2 <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-ui-kit2">
+                                    <a href="ui-media-object.html" class="dropdown-item">Media Object</a>
+                                    <a href="ui-modals.html" class="dropdown-item">Modals</a>
+                                    <a href="ui-notifications.html" class="dropdown-item">Notifications</a>
+                                    <a href="ui-pagination.html" class="dropdown-item">Pagination</a>
+                                    <a href="ui-popovers.html" class="dropdown-item">Popovers</a>
+                                    <a href="ui-progress.html" class="dropdown-item">Progress</a>
+                                    <a href="ui-ribbons.html" class="dropdown-item">Ribbons</a>
+                                    <a href="ui-spinners.html" class="dropdown-item">Spinners</a>
+                                    <a href="ui-tabs.html" class="dropdown-item">Tabs</a>
+                                    <a href="ui-tooltips.html" class="dropdown-item">Tooltips</a>
+                                    <a href="ui-typography.html" class="dropdown-item">Typography</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-extended-ui" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Extended UI <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-extended-ui">
+                                    <a href="extended-dragula.html" class="dropdown-item">Dragula</a>
+                                    <a href="extended-range-slider.html" class="dropdown-item">Range Slider</a>
+                                    <a href="extended-ratings.html" class="dropdown-item">Ratings</a>
+                                    <a href="extended-scrollbar.html" class="dropdown-item">Scrollbar</a>
+                                    <a href="extended-scrollspy.html" class="dropdown-item">Scrollspy</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-charts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Charts <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-charts">
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-apex-charts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Apex Charts <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-apex-charts">
+                                            <a href="charts-apex-area.html" class="dropdown-item">Area</a>
+                                            <a href="charts-apex-bar.html" class="dropdown-item">Bar</a>
+                                            <a href="charts-apex-bubble.html" class="dropdown-item">Bubble</a>
+                                            <a href="charts-apex-candlestick.html" class="dropdown-item">Candlestick</a>
+                                            <a href="charts-apex-column.html" class="dropdown-item">Column</a>
+                                            <a href="charts-apex-heatmap.html" class="dropdown-item">Heatmap</a>
+                                            <a href="charts-apex-line.html" class="dropdown-item">Line</a>
+                                            <a href="charts-apex-mixed.html" class="dropdown-item">Mixed</a>
+                                            <a href="charts-apex-pie.html" class="dropdown-item">Pie</a>
+                                            <a href="charts-apex-radar.html" class="dropdown-item">Radar</a>
+                                            <a href="charts-apex-radialbar.html" class="dropdown-item">RadialBar</a>
+                                            <a href="charts-apex-scatter.html" class="dropdown-item">Scatter</a>
+                                            <a href="charts-apex-sparklines.html" class="dropdown-item">Sparklines</a>
+                                        </div>
+                                    </div>
+                                    <a href="charts-chartjs.html" class="dropdown-item">Chartjs</a>
+                                    <a href="charts-brite.html" class="dropdown-item">Britecharts</a>
+                                    <a href="charts-sparkline.html" class="dropdown-item">Sparklines</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-forms" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Forms <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-forms">
+                                    <a href="form-elements.html" class="dropdown-item">Basic Elements</a>
+                                    <a href="form-advanced.html" class="dropdown-item">Form Advanced</a>
+                                    <a href="form-validation.html" class="dropdown-item">Validation</a>
+                                    <a href="form-wizard.html" class="dropdown-item">Wizard</a>
+                                    <a href="form-fileuploads.html" class="dropdown-item">File Uploads</a>
+                                    <a href="form-editors.html" class="dropdown-item">Editors</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-tables" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Tables <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-tables">
+                                    <a href="tables-basic.html" class="dropdown-item">Basic Tables</a>
+                                    <a href="tables-datatable.html" class="dropdown-item">Data Tables</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-icons" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Icons <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-icons">
+                                    <a href="icons-dripicons.html" class="dropdown-item">Dripicons</a>
+                                    <a href="icons-mdi.html" class="dropdown-item">Material Design</a>
+                                    <a href="icons-unicons.html" class="dropdown-item">Unicons</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-maps" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    Maps <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-maps">
+                                    <a href="maps-google.html" class="dropdown-item">Google Maps</a>
+                                    <a href="maps-vector.html" class="dropdown-item">Vector Maps</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layouts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="uil-window mr-1"></i>Layouts <div class="arrow-down"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="topnav-layouts">
+                            <a href="layouts-vertical.html" class="dropdown-item">Vertical</a>
+                            <a href="layouts-detached.html" class="dropdown-item">Detached</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
-
-    <!--- Sidemenu -->
-    <ul class="metismenu side-nav mm-show">
-
-        <li class="side-nav-title side-nav-item">Navigation</li>
-
-        <li class="side-nav-item">
-            <a href="javascript: void(0);" class="side-nav-link">
-                <i class="uil-home-alt"></i>
-                <span class="badge badge-info badge-pill float-right">4</span>
-                <span> Dashboards </span>
-            </a>
-            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
-                <li>
-                    <a href="dashboard-analytics.html">Analytics</a>
-                </li>
-                <li>
-                    <a href="dashboard-crm.html">CRM</a>
-                </li>
-                <li>
-                    <a href="index.html">Ecommerce</a>
-                </li>
-                <li>
-                    <a href="dashboard-projects.html">Projects</a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="side-nav-title side-nav-item">Apps</li>
-
-        <li class="side-nav-item">
-            <a href="apps-calendar.html" class="side-nav-link">
-                <i class="uil-calender"></i>
-                <span> Calendar </span>
-            </a>
-        </li>
-
-        <li class="side-nav-item">
-            <a href="apps-chat.html" class="side-nav-link">
-                <i class="uil-comments-alt"></i>
-                <span> Chat </span>
-            </a>
-        </li>
-
-        <li class="side-nav-item">
-            <a href="javascript: void(0);" class="side-nav-link">
-                <i class="uil-store"></i>
-                <span> Ecommerce </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
-                <li>
-                    <a href="apps-ecommerce-products.html">Products</a>
-                </li>
-                <li>
-                    <a href="apps-ecommerce-products-details.html">Products Details</a>
-                </li>
-                <li>
-                    <a href="apps-ecommerce-orders.html">Orders</a>
-                </li>
-                <li>
-                    <a href="apps-ecommerce-orders-details.html">Order Details</a>
-                </li>
-                <li>
-                    <a href="apps-ecommerce-customers.html">Customers</a>
-                </li>
-                <li>
-                    <a href="apps-ecommerce-shopping-cart.html">Shopping Cart</a>
-                </li>
-                <li>
-                    <a href="apps-ecommerce-checkout.html">Checkout</a>
-                </li>
-                <li>
-                    <a href="apps-ecommerce-sellers.html">Sellers</a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="side-nav-item">
-            <a href="javascript: void(0);" class="side-nav-link">
-                <i class="uil-envelope"></i>
-                <span> Email </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
-                <li>
-                    <a href="apps-email-inbox.html">Inbox</a>
-                </li>
-                <li>
-                    <a href="apps-email-read.html">Read Email</a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="side-nav-item mm-active">
-            <a href="javascript: void(0);" class="side-nav-link active">
-                <i class="uil-briefcase"></i>
-                <span> Projects </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <ul class="side-nav-second-level mm-collapse mm-show" aria-expanded="false">
-                <li class="mm-active">
-                    <a href="apps-projects-list.html" class="active">List</a>
-                </li>
-                <li>
-                    <a href="apps-projects-details.html">Details</a>
-                </li>
-                <li>
-                    <a href="apps-projects-gantt.html">Gantt <span class="badge badge-pill badge-dark-lighten font-10 float-right">New</span></a>
-                </li>
-                <li>
-                    <a href="apps-projects-add.html">Create Project <span class="badge badge-pill badge-success-lighten font-10 float-right">New</span></a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="side-nav-item">
-            <a href="apps-social-feed.html" class="side-nav-link">
-                <i class="uil-rss"></i>
-                <span> Social Feed </span>
-            </a>
-        </li>
-
-        <li class="side-nav-item">
-            <a href="javascript: void(0);" class="side-nav-link">
-                <i class="uil-clipboard-alt"></i>
-                <span> Tasks </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
-                <li>
-                    <a href="apps-tasks.html">List</a>
-                </li>
-                <li>
-                    <a href="apps-tasks-details.html">Details</a>
-                </li>
-                <li>
-                    <a href="apps-kanban.html">Kanban Board</a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="side-nav-title side-nav-item">Custom</li>
-
-        <li class="side-nav-item">
-            <a href="javascript: void(0);" class="side-nav-link">
-                <i class="uil-copy-alt"></i>
-                <span> Pages </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
-                <li>
-                    <a href="pages-profile.html">Profile</a>
-                </li>
-                <li>
-                    <a href="pages-profile-2.html">Profile 2</a>
-                </li>
-                <li>
-                    <a href="pages-invoice.html">Invoice</a>
-                </li>
-                <li>
-                    <a href="pages-faq.html">FAQ</a>
-                </li>
-                <li>
-                    <a href="pages-pricing.html">Pricing</a>
-                </li>
-                <li>
-                    <a href="pages-maintenance.html">Maintenance</a>
-                </li>
-                <li class="side-nav-item">
-                    <a href="javascript: void(0);" aria-expanded="false">Authentication
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <ul class="side-nav-third-level mm-collapse" aria-expanded="false">
-                        <li>
-                            <a href="pages-login.html">Login</a>
-                        </li>
-                        <li>
-                            <a href="pages-login-2.html">Login 2</a>
-                        </li>
-                        <li>
-                            <a href="pages-register.html">Register</a>
-                        </li>
-                        <li>
-                            <a href="pages-register-2.html">Register 2</a>
-                        </li>
-                        <li>
-                            <a href="pages-logout.html">Logout</a>
-                        </li>
-                        <li>
-                            <a href="pages-logout-2.html">Logout 2</a>
-                        </li>
-                        <li>
-                            <a href="pages-recoverpw.html">Recover Password</a>
-                        </li>
-                        <li>
-                            <a href="pages-recoverpw-2.html">Recover Password 2</a>
-                        </li>
-                        <li>
-                            <a href="pages-lock-screen.html">Lock Screen</a>
-                        </li>
-                        <li>
-                            <a href="pages-lock-screen-2.html">Lock Screen 2</a>
-                        </li>
-                        <li>
-                            <a href="pages-confirm-mail.html">Confirm Mail</a>
-                        </li>
-                        <li>
-                            <a href="pages-confirm-mail-2.html">Confirm Mail 2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="side-nav-item">
-                    <a href="javascript: void(0);" aria-expanded="false">Error
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <ul class="side-nav-third-level mm-collapse" aria-expanded="false">
-                        <li>
-                            <a href="pages-404.html">Error 404</a>
-                        </li>
-                        <li>
-                            <a href="pages-404-alt.html">Error 404-alt</a>
-                        </li>
-                        <li>
-                            <a href="pages-500.html">Error 500</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="pages-starter.html">Starter Page</a>
-                </li>
-                <li>
-                    <a href="pages-preloader.html">With Preloader</a>
-                </li>
-                <li>
-                    <a href="pages-timeline.html">Timeline</a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="side-nav-item">
-            <a href="landing.html" target="_blank" class="side-nav-link">
-                <i class="uil-globe"></i>
-                <span class="badge badge-light float-right">New</span>
-                <span> Landing </span>
-            </a>
-        </li>
-
-        <li class="side-nav-item">
-            <a href="javascript: void(0);" class="side-nav-link">
-                <i class="uil-window"></i>
-                <span> Layouts </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
-                <li>
-                    <a href="layouts-horizontal.html">Horizontal</a>
-                </li>
-                <li>
-                    <a href="layouts-vertical.html">Vertical</a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="side-nav-title side-nav-item mt-1">Components</li>
-
-        <li class="side-nav-item">
-            <a href="javascript: void(0);" class="side-nav-link">
-                <i class="uil-box"></i>
-                <span> Base UI </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
-                <li>
-                    <a href="ui-accordions.html">Accordions</a>
-                </li>
-                <li>
-                    <a href="ui-alerts.html">Alerts</a>
-                </li>
-                <li>
-                    <a href="ui-avatars.html">Avatars</a>
-                </li>
-                <li>
-                    <a href="ui-badges.html">Badges</a>
-                </li>
-                <li>
-                    <a href="ui-breadcrumb.html">Breadcrumb</a>
-                </li>
-                <li>
-                    <a href="ui-buttons.html">Buttons</a>
-                </li>
-                <li>
-                    <a href="ui-cards.html">Cards</a>
-                </li>
-                <li>
-                    <a href="ui-carousel.html">Carousel</a>
-                </li>
-                <li>
-                    <a href="ui-dropdowns.html">Dropdowns</a>
-                </li>
-                <li>
-                    <a href="ui-embed-video.html">Embed Video</a>
-                </li>
-                <li>
-                    <a href="ui-grid.html">Grid</a>
-                </li>
-                <li>
-                    <a href="ui-list-group.html">List Group</a>
-                </li>
-                <li>
-                    <a href="ui-media-object.html">Media Object</a>
-                </li>
-                <li>
-                    <a href="ui-modals.html">Modals</a>
-                </li>
-                <li>
-                    <a href="ui-notifications.html">Notifications</a>
-                </li>
-                <li>
-                    <a href="ui-pagination.html">Pagination</a>
-                </li>
-                <li>
-                    <a href="ui-popovers.html">Popovers</a>
-                </li>
-                <li>
-                    <a href="ui-progress.html">Progress</a>
-                </li>
-                <li>
-                    <a href="ui-ribbons.html">Ribbons</a>
-                </li>
-                <li>
-                    <a href="ui-spinners.html">Spinners</a>
-                </li>
-                <li>
-                    <a href="ui-tabs.html">Tabs</a>
-                </li>
-                <li>
-                    <a href="ui-tooltips.html">Tooltips</a>
-                </li>
-                <li>
-                    <a href="ui-typography.html">Typography</a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="side-nav-item">
-            <a href="javascript: void(0);" class="side-nav-link">
-                <i class="uil-package"></i>
-                <span> Extended UI </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
-                <li>
-                    <a href="extended-dragula.html">Dragula</a>
-                </li>
-                <li>
-                    <a href="extended-range-slider.html">Range Slider</a>
-                </li>
-                <li>
-                    <a href="extended-ratings.html">Ratings</a>
-                </li>
-                <li>
-                    <a href="extended-scrollbar.html">Scrollbar</a>
-                </li>
-                <li>
-                    <a href="extended-scrollspy.html">Scrollspy</a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="side-nav-item">
-            <a href="widgets.html" class="side-nav-link">
-                <i class="uil-layer-group"></i>
-                <span> Widgets </span>
-            </a>
-        </li>
-
-        <li class="side-nav-item">
-            <a href="javascript: void(0);" class="side-nav-link">
-                <i class="uil-streering"></i>
-                <span> Icons </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
-                <li>
-                    <a href="icons-dripicons.html">Dripicons</a>
-                </li>
-                <li>
-                    <a href="icons-mdi.html">Material Design</a>
-                </li>
-                <li>
-                    <a href="icons-unicons.html">Unicons</a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="side-nav-item">
-            <a href="javascript: void(0);" class="side-nav-link">
-                <i class="uil-document-layout-center"></i>
-                <span> Forms </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
-                <li>
-                    <a href="form-elements.html">Basic Elements</a>
-                </li>
-                <li>
-                    <a href="form-advanced.html">Form Advanced</a>
-                </li>
-                <li>
-                    <a href="form-validation.html">Validation</a>
-                </li>
-                <li>
-                    <a href="form-wizard.html">Wizard</a>
-                </li>
-                <li>
-                    <a href="form-fileuploads.html">File Uploads</a>
-                </li>
-                <li>
-                    <a href="form-editors.html">Editors</a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="side-nav-item">
-            <a href="javascript: void(0);" class="side-nav-link">
-                <i class="uil-chart"></i>
-                <span> Charts </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
-                <li class="side-nav-item">
-                    <a href="javascript: void(0);" aria-expanded="false">Apex Charts
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <ul class="side-nav-third-level mm-collapse" aria-expanded="false">
-                        <li>
-                            <a href="charts-apex-area.html">Area</a>
-                        </li>
-                        <li>
-                            <a href="charts-apex-bar.html">Bar</a>
-                        </li>
-                        <li>
-                            <a href="charts-apex-bubble.html">Bubble</a>
-                        </li>
-                        <li>
-                            <a href="charts-apex-candlestick.html">Candlestick</a>
-                        </li>
-                        <li>
-                            <a href="charts-apex-column.html">Column</a>
-                        </li>
-                        <li>
-                            <a href="charts-apex-heatmap.html">Heatmap</a>
-                        </li>
-                        <li>
-                            <a href="charts-apex-line.html">Line</a>
-                        </li>
-                        <li>
-                            <a href="charts-apex-mixed.html">Mixed</a>
-                        </li>
-                        <li>
-                            <a href="charts-apex-pie.html">Pie</a>
-                        </li>
-                        <li>
-                            <a href="charts-apex-radar.html">Radar</a>
-                        </li>
-                        <li>
-                            <a href="charts-apex-radialbar.html">RadialBar</a>
-                        </li>
-                        <li>
-                            <a href="charts-apex-scatter.html">Scatter</a>
-                        </li>
-                        <li>
-                            <a href="charts-apex-sparklines.html">Sparklines</a>
-                        </li>
-
-                    </ul>
-                </li>
-                <li>
-                    <a href="charts-brite.html">Britecharts</a>
-                </li>
-                <li>
-                    <a href="charts-chartjs.html">Chartjs</a>
-                </li>
-                <li>
-                    <a href="charts-sparkline.html">Sparklines</a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="side-nav-item">
-            <a href="javascript: void(0);" class="side-nav-link">
-                <i class="uil-table"></i>
-                <span> Tables </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
-                <li>
-                    <a href="tables-basic.html">Basic Tables</a>
-                </li>
-                <li>
-                    <a href="tables-datatable.html">Data Tables</a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="side-nav-item">
-            <a href="javascript: void(0);" class="side-nav-link">
-                <i class="uil-location-point"></i>
-                <span> Maps </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
-                <li>
-                    <a href="maps-google.html">Google Maps</a>
-                </li>
-                <li>
-                    <a href="maps-vector.html">Vector Maps</a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="side-nav-item">
-            <a href="javascript: void(0);" class="side-nav-link">
-                <i class="uil-folder-plus"></i>
-                <span> Multi Level </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
-                <li class="side-nav-item">
-                    <a href="javascript: void(0);" aria-expanded="false">Second Level
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <ul class="side-nav-third-level mm-collapse" aria-expanded="false">
-                        <li>
-                            <a href="javascript: void(0);">Item 1</a>
-                        </li>
-                        <li>
-                            <a href="javascript: void(0);">Item 2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="side-nav-item">
-                    <a href="javascript: void(0);" aria-expanded="false">Third Level
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <ul class="side-nav-third-level mm-collapse" aria-expanded="false">
-                        <li>
-                            <a href="javascript: void(0);">Item 1</a>
-                        </li>
-                        <li class="side-nav-item">
-                            <a href="javascript: void(0);" aria-expanded="false">Item 2
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul class="side-nav-forth-level mm-collapse" aria-expanded="false">
-                                <li>
-                                    <a href="javascript: void(0);">Item 2.1</a>
-                                </li>
-                                <li>
-                                    <a href="javascript: void(0);">Item 2.2</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-
-    </ul>
-
-    <!-- Help Box -->
-    <div class="help-box text-center">
-        <a href="javascript: void(0);" class="float-right close-btn text-body">
-            <i class="mdi mdi-close"></i>
-        </a>
-        <img src="assets/images/help-icon.svg" height="90" alt="Helper Icon Image">
-        <h5 class="mt-3">Unlimited Access</h5>
-        <p class="mb-3">Upgrade to plan to get access to unlimited reports</p>
-        <a href="javascript: void(0);" class="btn btn-outline-primary btn-sm">Upgrade</a>
-    </div>
-    <!-- end Help Box -->
-    <!-- End Sidebar -->
-
-    <div class="clearfix"></div>
-    <!-- Sidebar -left -->
-
 </div>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{asset('css/app-modern.min.css')}}">
 {{--    <link rel="stylesheet" href="{{asset('css/app-modern-dark.min.css')}}">--}}
     @yield('css')
-    <title>Document</title>
+    <title>Peca puppy</title>
 </head>
 <body class="loading" data-layout="detached" data-layout-config='{"leftSidebarCondensed":false,"darkMode":false, "showRightSidebarOnStart": true}'>
 <header>
