@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Repository\AdminRepos;
 use App\Repository\UserAuth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
@@ -18,6 +19,7 @@ class UserAuthController extends Controller
 
     public function login(Request $request)
     {
+
         $validation = $this->checklogin($request);
         if ($validation->fails()) {
             return redirect()->back()->withErrors($validation)->withInput();

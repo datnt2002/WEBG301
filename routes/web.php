@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserAuthController;
 
 
-
 Route::prefix('homepage')->group(function () {
     Route::prefix('puppyManager')->group(function () {
         Route::get('/', [PuppyController::class, 'index'])->name('puppy.index')->middleware('loginAdmin');
@@ -22,9 +21,10 @@ Route::prefix('homepage')->group(function () {
         Route::post('/update/{id}', [PuppyController::class, 'update'])->name('puppy.update');
         Route::get('/delete/{id}', [PuppyController::class, 'confirm'])->name('puppy.confirm');
         Route::post('/delete/{id}', [PuppyController::class, 'delete'])->name('puppy.delete');
+        Route::get('/breed', [PuppyController::class, 'ShowBreed'])->name('puppy.breed');
     });
 
-    Route::prefix('customerManager')->group(function (){
+    Route::prefix('customerManager')->group(function () {
         Route::get('/account', [RegisterController::class, 'userAccount'])->name('user.account');
 
 
@@ -43,7 +43,7 @@ Route::prefix('Main')->group(function () {
 });
 
 
-Route::prefix('userauth')->group(function (){
+Route::prefix('userauth')->group(function () {
     Route::get('/login', [UserAuthController::class, 'index']);
     Route::post('/login', [UserAuthController::class, 'login',])->name('admin.login');
 

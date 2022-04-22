@@ -5,20 +5,23 @@ namespace App\Http\Controllers;
 use App\Repository\UserAuth;
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
-    public function userAccount(){
+    public function userAccount()
+    {
         $users = UserAuth::GetAllAccount();
         return view('puppywebsite.accountUser.userAccount', [
             'users' => $users,
         ]);
     }
 
-    public function index(){
-        return view('UserAuth.register',[
-            'user'=>(object)[
+    public function index()
+    {
+        return view('UserAuth.register', [
+            'user' => (object)[
                 'fullName' => '',
                 'email' => '',
                 'address' => '',
@@ -29,10 +32,11 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function storeAccount(Request $request){
+    public function storeAccount(Request $request)
+    {
         $this->validation($request)->validate();
 
-        $users =  [
+        $users = [
             'fullName' => $request->input('fullName'),
             'email' => $request->input('email'),
             'address' => $request->input('address'),
@@ -56,7 +60,8 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function updateCustomer(Request $request, $id) {
+    public function updateCustomer(Request $request, $id)
+    {
         $this->validation($request)->validate();
 
         $user = [
@@ -70,6 +75,7 @@ class RegisterController extends Controller
         UserAuth::update($id, $user);
         return redirect()->route('puppy.index');
     }
+
     public function confirmCustomer($id)
     {
         $user = UserAuth::GetUserByID($id);
@@ -83,9 +89,11 @@ class RegisterController extends Controller
         UserAuth::delete($id);
         return redirect()->Route('puppy.index');
     }
-    private function validation($request){
-        return Validator::make($request->all(),[
-            'fullName' => ['required'],
+
+    private function validation($request)
+    {
+        return Validator::make($request->all(), [
+                'fullName' => ['required'],
                 'email' => ['required'],
                 'address' => ['required'],
                 'username' => ['required'],
@@ -93,7 +101,6 @@ class RegisterController extends Controller
             ]
         );
     }
-
 
 
 }
