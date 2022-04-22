@@ -17,18 +17,43 @@ class PuppyController extends Controller
         ]);
     }
 
+    public function GetAllBreed()
+    {
+        $breed = PuppyRepos::GetAllBreeds();
+        return view('puppywebsite.breed', [
+            'breed' => $breed
+        ]);
+    }
+
+    public function breedEdit(Request $rq, $id)
+    {
+        $breed = [
+            'breed' => $rq->breed
+        ];
+        PuppyRepos::UpdateBreed($breed,$id);
+        return redirect()->route('puppy.breed');
+    }
+
+    public function breedUpdate($id)
+    {
+        $breed = PuppyRepos::GetBreedByID($id);
+        return view('puppywebsite.breedDetail', [
+            'breed' => $breed
+        ]);
+    }
+
     public function create()
     {
         $breed = PuppyRepos::GetAllBreeds();
 
         return view('puppywebsite.create', [
                 'breed' => $breed,
-                'pet' => (object) [
+                'pet' => (object)[
                     'Pid' => '',
                     'name' => '',
                     'area' => '',
                     'breedID' => '',
-                    'image' => '/images/puppy_images/'.'',
+                    'image' => '/images/puppy_images/' . '',
                     'color' => '',
                     'detail' => '',
                 ],
@@ -41,10 +66,10 @@ class PuppyController extends Controller
     {
         return view('puppywebsite.createBreed', [
 
-            'Breed' => (object) [
-                'breed' => ''
+                'Breed' => (object)[
+                    'breed' => ''
+                ]
             ]
-        ]
         );
     }
 
@@ -66,7 +91,7 @@ class PuppyController extends Controller
             'area' => $rq->area,
             'breed' => $rq->Breed,
             'gender' => $rq->gender,
-            'image' => '/images/puppy_images/'.$rq->image,
+            'image' => '/images/puppy_images/' . $rq->image,
             'color' => $rq->color,
             'detail' => $rq->detail
         ];
@@ -94,7 +119,7 @@ class PuppyController extends Controller
             'area' => $rq->input('area'),
             'breed' => $rq->input('Breed'),
             'gender' => $rq->input('gender'),
-            'image' => '/images/puppy_images/'.$rq->input('image'),
+            'image' => '/images/puppy_images/' . $rq->input('image'),
             'color' => $rq->input('color'),
             'detail' => $rq->input('detail')
         ];

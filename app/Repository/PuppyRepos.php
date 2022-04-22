@@ -64,6 +64,13 @@ class PuppyRepos
         ]);
     }
 
+    public static function UpdateBreed($breed, $id)
+    {
+        DB::table('breeds')->where('id', '=', $id)->update([
+            'bread' => $breed['breed']
+        ]);
+    }
+
     public static function Delete($id)
     {
         DB::table('puppy')->where('Pid', '=', $id)->delete();
