@@ -46,7 +46,7 @@
                                     </a>
                                 </li>
                                 <li class="side-nav-item">
-                                    <a href="{{route('user.breed')}}" class="side-nav-link">
+                                    <a href="{{route('puppy.breed')}}" class="side-nav-link">
                                         <i class="mdi mdi-account-convert-outline"></i>
                                         <span> Breed </span>
                                     </a>
