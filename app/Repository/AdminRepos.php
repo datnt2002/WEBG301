@@ -16,5 +16,14 @@ class AdminRepos
          return DB::table('admin')->where('username', '=', $username)->get();
 
     }
-
+    public static function Update($username, $admin)
+    {
+        DB::table('admin')->where('username', '=', $username)->update([
+//            'name' => $admin['name'],
+            'email' => $admin['email'],
+            'phone' => $admin['phone'],
+            'gender' => $admin['gender'],
+//            'username' => $admin['username'],
+        ]);
+    }
 }

@@ -37,6 +37,8 @@ Route::prefix('homepage')->group(function () {
     Route::get('/admin', [AdminController::class, 'adminAccount'])->name('admin.account');
 
     Route::get('/myaccount/{username}', [AdminController::class, 'myAccount'])->name('admin.myaccount');
+    Route::get('/update/{username}', [AdminController::class, 'editAdmin'])->name('admin.edit');
+    Route::post('/update/{username}', [AdminController::class, 'updateAdmin'])->name('admin.update');
 });
 
 Route::prefix('Main')->group(function () {
