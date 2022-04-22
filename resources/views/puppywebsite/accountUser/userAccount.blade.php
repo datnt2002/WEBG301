@@ -37,7 +37,7 @@
                                 <td>**************</td>
                                 <td class="table-action">
                                     <a
-{{--                                        href="{{route('user.edit',['id'=>$user->Cid])}}" --}}
+                                        href="{{route('user.edit',['id'=>$user->Cid])}}"
                                        class="action-icon">
                                         <i class="mdi mdi-pencil"></i></a>
                                     <a

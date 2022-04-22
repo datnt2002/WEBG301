@@ -18,7 +18,6 @@ Route::prefix('homepage')->group(function () {
         Route::get('/createBreed', [PuppyController::class, 'createBreed'])->name('puppy.createBreed');
         Route::post('/createBreed', [PuppyController::class, 'storeBreed'])->name('puppy.storeBreed');
 
-        Route::get('/delete/{id}', [PuppyController::class, 'confirm'])->name('puppy.confirm');
         Route::get('/update/{id}', [PuppyController::class, 'edit'])->name('puppy.edit');
         Route::post('/update/{id}', [PuppyController::class, 'update'])->name('puppy.update');
         Route::get('/delete/{id}', [PuppyController::class, 'confirm'])->name('puppy.confirm');
@@ -28,9 +27,9 @@ Route::prefix('homepage')->group(function () {
     Route::prefix('customerManager')->group(function (){
         Route::get('/account', [RegisterController::class, 'userAccount'])->name('user.account');
 
-////        Route::get('/delete/{id}', [PuppyController::class, 'confirm'])->name('puppy.confirm');
-//        Route::get('/update/{id}', [RegisterController::class, 'editCustomer'])->name('user.edit');
-//        Route::post('/update/{id}', [RegisterController::class, 'updateCustomer'])->name('user.update');
+
+        Route::get('/update/{id}', [RegisterController::class, 'editCustomer'])->name('user.edit');
+        Route::post('/update/{id}', [RegisterController::class, 'updateCustomer'])->name('user.update');
 //        Route::get('/delete/{id}', [RegisterController::class, 'confirmCustomer'])->name('user.confirm');
 //        Route::post('/delete/{id}', [RegisterController::class, 'deleteCustomer'])->name('user.delete');
 

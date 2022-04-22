@@ -99,7 +99,7 @@ class PuppyController extends Controller
             'detail' => $rq->input('detail')
         ];
         PuppyRepos::update($id, $pet);
-        return redirect()->route('puppy.index');
+        return redirect()->route('user.account');
     }
 
 

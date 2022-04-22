@@ -12,13 +12,16 @@ class UserAuth
         $users = DB::table('users')->select('users.*')->get();
         return $users;
     }
-
-
-    public static function loginCustomer($username, $password)
+    public static function GetUserByID($id)
     {
-        return DB::table('users')->where(['username' => $username, 'password' => $password])->count();
-
+        return DB::table('users')->where('Cid', '=', $id)->get();
     }
+
+//    public static function loginCustomer($username, $password)
+//    {
+//        return DB::table('users')->where(['username' => $username, 'password' => $password])->count();
+//
+//    }
     public static function login($username, $password)
     {
         return DB::table('admin')->where(['username' => $username, 'password' => $password])->count();
@@ -26,6 +29,18 @@ class UserAuth
     public static function store($users)
     {
         DB::table('users')->insert([
+            'customer_name' => $users['fullName'],
+            'email' => $users['email'],
+            'address' => $users['address'],
+            'gender' => $users['gender'],
+            'username' => $users['username'],
+            'password' => $users['password'],
+        ]);
+    }
+
+    public static function update($id, $users)
+    {
+        DB::table('users')->where('Cid', '=', $id)->update([
             'customer_name' => $users['fullName'],
             'email' => $users['email'],
             'address' => $users['address'],

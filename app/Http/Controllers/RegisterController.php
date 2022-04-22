@@ -46,6 +46,31 @@ class RegisterController extends Controller
         return redirect()->route('admin.login');
     }
 
+    public function editCustomer($id)
+    {
+        $users = UserAuth::GetUserByID($id);
+//        $breed = UserAuth::GetAllBreeds();
+        return view('puppywebsite.accountUser.updateUser', [
+            'users' => $users,
+//            'breed' => $breed
+        ]);
+    }
+
+    public function updateCustomer(Request $request, $id) {
+//        $this->validation($request)->validate();
+
+        $user = [
+            'fullName' => $request->input('fullName'),
+            'email' => $request->input('email'),
+            'address' => $request->input('address'),
+            'gender' => $request->input('gender'),
+            'username' => $request->input('username'),
+            'password' => $request->input('password')
+        ];
+        UserAuth::update($id, $user);
+        return redirect()->route('puppy.index');
+    }
+
     private function validation($request){
         return Validator::make($request->all(),[
             'fullName' => ['required'],
