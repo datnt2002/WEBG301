@@ -57,7 +57,7 @@ class RegisterController extends Controller
     }
 
     public function updateCustomer(Request $request, $id) {
-//        $this->validation($request)->validate();
+        $this->validation($request)->validate();
 
         $user = [
             'fullName' => $request->input('fullName'),
@@ -70,7 +70,19 @@ class RegisterController extends Controller
         UserAuth::update($id, $user);
         return redirect()->route('puppy.index');
     }
+    public function confirmCustomer($id)
+    {
+        $user = UserAuth::GetUserByID($id);
+        return view('puppywebsite.accountUser.confirmCustomer', [
+            'user' => $user
+        ]);
+    }
 
+    public function deleteCustomer($id)
+    {
+        UserAuth::delete($id);
+        return redirect()->Route('puppy.index');
+    }
     private function validation($request){
         return Validator::make($request->all(),[
             'fullName' => ['required'],

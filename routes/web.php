@@ -30,8 +30,8 @@ Route::prefix('homepage')->group(function () {
 
         Route::get('/update/{id}', [RegisterController::class, 'editCustomer'])->name('user.edit');
         Route::post('/update/{id}', [RegisterController::class, 'updateCustomer'])->name('user.update');
-//        Route::get('/delete/{id}', [RegisterController::class, 'confirmCustomer'])->name('user.confirm');
-//        Route::post('/delete/{id}', [RegisterController::class, 'deleteCustomer'])->name('user.delete');
+        Route::get('/delete/{id}', [RegisterController::class, 'confirmCustomer'])->name('user.confirm');
+        Route::post('/delete/{id}', [RegisterController::class, 'deleteCustomer'])->name('user.delete');
 
     });
     Route::get('/admin', [AdminController::class, 'adminAccount'])->name('admin.account');

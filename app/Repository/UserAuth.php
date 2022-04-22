@@ -49,4 +49,8 @@ class UserAuth
             'password' => $users['password'],
         ]);
     }
+    public static function delete($id)
+    {
+        DB::table('users')->where('Cid', '=', $id)->delete();
+    }
 }

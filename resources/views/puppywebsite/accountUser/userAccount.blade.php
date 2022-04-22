@@ -41,7 +41,7 @@
                                        class="action-icon">
                                         <i class="mdi mdi-pencil"></i></a>
                                     <a
-{{--                                        href="{{route('user.confirm',['id'=>$user->Cid])}}" --}}
+                                        href="{{route('user.confirm',['id'=>$user->Cid])}}"
                                         class="action-icon">
                                         <i class="mdi mdi-delete"></i></a>
                                 </td>
