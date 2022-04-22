@@ -35,6 +35,8 @@ Route::prefix('homepage')->group(function () {
 
     });
     Route::get('/admin', [AdminController::class, 'adminAccount'])->name('admin.account');
+
+    Route::get('/myaccount/{username}', [AdminController::class, 'myAccount'])->name('admin.myaccount');
 });
 
 Route::prefix('Main')->group(function () {

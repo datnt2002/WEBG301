@@ -10,15 +10,35 @@
     @include('partials.LeftNav');
     <div class="container-fluid">
         <div class="content-page" style="padding: 0 20px 100px 20px">
-            <h1>Delete Puppy</h1>
+            <h1>Admin Account</h1>
+            <dl class="row">
+                <dt class="col-sm-3">ID</dt>
+                <dd class="col-sm-9">{{$admin->Aid}}</dd>
 
-            <form action="{{route('puppy.delete', ['id' =>$pet[0]->Pid])}}" method="post">
-                @csrf
-                {{--            <input type="hidden" name="id" value="{{$book->id}}">--}}
+                <dt class="col-sm-3">Name</dt>
+                <dd class="col-sm-9">{{$admin->name}}</dd>
+
+                <dt class="col-sm-3">Email</dt>
+                <dd class="col-sm-9">{{$admin->email}}</dd>
+
+                <dt class="col-sm-3">Phone</dt>
+                <dd class="col-sm-9">{{$admin->phone}}</dd>
+
+                <dt class="col-sm-3">Gender</dt>
+                <dd class="col-sm-9">{{$admin->gender}}</dd>
+
+                <dt class="col-sm-3">Username</dt>
+                <dd class="col-sm-9">{{$admin->username}}</dd>
+
+                <dt class="col-sm-3">Password</dt>
+                <dd class="col-sm-9">{{$admin->password}}</dd>
+            </dl>
+{{--            <form action="{{route('puppy.update',['id'=> $pets[0]->Pid])}}" method="post">--}}
+{{--                @csrf--}}
 {{--                @foreach($pets as $pet)--}}
 {{--                    <div class="form-group">--}}
-{{--                        <label for="simpleinput" value="{{$pet->name}}>Name</label>--}}
-{{--                        <input type="text" id="simpleinput" class="form-control" name="name" ">--}}
+{{--                        <label for="simpleinput">Name</label>--}}
+{{--                        <input type="text" id="simpleinput" class="form-control" name="name" value="{{$pet->name}}">--}}
 {{--                    </div>--}}
 {{--                    <div class="form-group">--}}
 {{--                        <label for="simpleinput">Area</label>--}}
@@ -55,8 +75,7 @@
 {{--                        <input type="text" id="simpleinput" class="form-control" name="detail" value="{{$pet->Detail}}">--}}
 {{--                    </div>--}}
 {{--                @endforeach--}}
-                <button type="submit" class="btn btn-danger"  style="border-radius: 15px">Delete</button>
-                <a href="{{route('puppy.index')}}" class="btn btn-info" style="border-radius: 15px">Cancel</a>
-            </form>
-        </div>
+
+{{--                <button type="submit" class="btn btn-primary" style="border-radius: 15px">Update</button>--}}
+{{--            </form>--}}
 @endsection

@@ -7,7 +7,12 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-//    public function
+    public function myAccount($username){
+        $admin = AdminRepos::GetAdminByUsername($username);
+        return view('puppywebsite.accountAdmin.myAccount', [
+            'admin' => $admin[0],
+        ]);
+    }
 
     public function adminAccount(){
         $admin = AdminRepos::GetAllAccount();

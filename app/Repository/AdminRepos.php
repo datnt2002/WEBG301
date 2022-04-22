@@ -11,6 +11,10 @@ class AdminRepos
         return $admin;
     }
 
+    public static function GetAdminByUsername($username)
+    {
+         return DB::table('admin')->where('username', '=', $username)->get();
 
+    }
 
 }

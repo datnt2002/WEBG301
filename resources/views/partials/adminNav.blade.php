@@ -12,6 +12,16 @@
         </a>
 
         <ul class="list-unstyled topbar-right-menu float-right mb-0">
+            <li class="dropdown notification-list d-lg-none show">
+                <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="true">
+                    <i class="dripicons-search noti-icon"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-animated dropdown-lg p-0 show" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(10px, 70px, 0px);" x-placement="bottom-start">
+                    <form class="p-3">
+                        <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                    </form>
+                </div>
+            </li>
             {{--            <li class="dropdown notification-list">--}}
             {{--                <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" id="topbar-notifydrop"--}}
             {{--                   role="button" aria-haspopup="true" aria-expanded="false">--}}
@@ -56,7 +66,7 @@
                     </div>
 
                     <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <a href="{{route('admin.myaccount', Session::get('username') )}}" class="dropdown-item notify-item">
                         <i class="mdi mdi-account-circle mr-1"></i>
                         <span>My Account</span>
                     </a>
@@ -71,7 +81,7 @@
 
         </ul>
 
-        {{--        //them dropdown cua search trong template--}}
+
         <div class="app-search dropdown">
             <form>
                 <div class="input-group">
