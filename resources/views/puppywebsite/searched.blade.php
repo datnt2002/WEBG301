@@ -59,10 +59,10 @@
                                     {{--                                       data-toggle="modal" data-target="#danger-header-modal"--}}
                                     {{--                                    >--}}
                                     {{--                                        <i class="mdi mdi-delete"></i></a>--}}
-{{--                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">--}}
+                                    {{--                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">--}}
 
-                                        <i class="mdi mdi-delete action-icon" type="button" data-toggle="modal" data-target="#exampleModalScrollable">
-{{--                                    </button>--}}
+                                    <i class="mdi mdi-delete action-icon" type="button" data-toggle="modal" data-target="#exampleModalScrollable">
+                                    {{--                                    </button>--}}
                                     @include('puppywebsite.deletemodal')
                                 </td>
                             </tr>

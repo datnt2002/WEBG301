@@ -19,10 +19,11 @@ Route::prefix('homepage')->group(function () {
         Route::post('/update/{id}', [PuppyController::class, 'update'])->name('puppy.update');
         Route::get('/delete/{id}', [PuppyController::class, 'confirm'])->name('puppy.confirm');
         Route::post('/delete/{id}', [PuppyController::class, 'delete'])->name('puppy.delete');
-
         Route::get('/breed', [PuppyController::class, 'GetAllBreed'])->name('puppy.breed');
         Route::get('/breedUpdate/{id}', [PuppyController::class, 'breedUpdate'])->name('breed.update');
         Route::post('/breedUpdate/{id}', [PuppyController::class, 'breedEdit'])->name('breed.Edit');
+
+        Route::get('/search', [PuppyController::class, 'SearchPet'])->name('FindPetByName');
         Route::get('/breedDelete/{id}', [PuppyController::class, 'breedConfirm'])->name('breed.confirm');
         Route::post('/breedDelete/{id}', [PuppyController::class, 'breedDelete'])->name('breed.delete');
 

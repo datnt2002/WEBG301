@@ -22,7 +22,7 @@
                      x-placement="bottom-start">
                     <form class="p-3">
                         <input type="text" class="form-control" placeholder="Search ..."
-                               aria-label="Recipient's username">
+                               aria-label="Recipient's username" name="petname">
                     </form>
                 </div>
             </li>
@@ -41,8 +41,8 @@
                                         </span>
                 </a>
                 <div
-                    class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu profile-dropdown"
-                    aria-labelledby="topbar-userdrop" style="">
+                        class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu profile-dropdown"
+                        aria-labelledby="topbar-userdrop" style="">
                     <!-- item-->
                     <div class=" dropdown-header noti-title">
                         <h6 class="text-overflow m-0">Welcome !</h6>
@@ -61,10 +61,10 @@
             </li>
         </ul>
         <div class="app-search dropdown">
-            <form>
+            <form action="{{route('FindPetByName')}}" method="get">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search..." id="top-search"
-                           style="border-radius: 15px; margin-right: 15px">
+                           style="border-radius: 15px; margin-right: 15px" name="petname">
                     <span class="mdi mdi-magnify search-icon"></span>
                     <div class="input-group-append">
                         <button class="btn btn-primary" type="submit" style="border-radius: 15px">Search</button>

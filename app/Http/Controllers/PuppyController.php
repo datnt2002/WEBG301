@@ -16,7 +16,15 @@ class PuppyController extends Controller
             'pets' => $pets
         ]);
     }
-
+    public function SearchPet()
+    {
+        $pet = $_GET['petname'];
+        $result = PuppyRepos::FindPetByName($pet);
+//        dd($result);
+        return view('puppywebsite.index', [
+            'pets' => $result
+        ]);
+    }
     public function GetAllBreed()
     {
         $breed = PuppyRepos::GetAllBreeds();
