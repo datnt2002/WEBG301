@@ -24,9 +24,9 @@ class UserAuth
 //    }
     public static function login($username, $password)
     {
-        $sql = "SELECT * FROM admin WHERE username='".$username."' AND password='".md5($password)."'";
-        return DB::select($sql);
-//        return DB::table('admin')->where(['username' => $username, 'password' => $password])->count();
+//        $sql = "SELECT * FROM admin WHERE username='".$username."' AND password='".md5($password)."'";
+//        return DB::select($sql);
+        return DB::table('admin')->where(['username' => $username, 'password' => md5($password)])->count();
     }
     public static function store($users)
     {
