@@ -20,7 +20,7 @@
                      x-placement="bottom-start">
                     <form class="p-3">
                         <input type="text" class="form-control" placeholder="Search ..."
-                               aria-label="Recipient's username">
+                               aria-label="Recipient's username" name="petname">
                     </form>
                 </div>
             </li>
