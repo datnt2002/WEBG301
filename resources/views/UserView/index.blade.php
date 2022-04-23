@@ -6,9 +6,8 @@
 @endsection
 
 @section('main')
-{{--@include('UserView.Partial.navbar')--}}
+@include('UserView.Partial.navbar')
 {{--@include('UserView.Partial.leftnav')--}}
-@include('partials.adminNav')
 <div id="carouselExampleControls" class="carousel slide "
      data-ride="carousel" style="height: 500px">
     <div class="carousel-inner" role="listbox" style="height: 100%; width: 100%">
