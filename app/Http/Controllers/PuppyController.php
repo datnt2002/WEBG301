@@ -172,4 +172,15 @@ class PuppyController extends Controller
         PuppyRepos::delete($id);
         return redirect()->Route('puppy.index');
     }
+
+//    public function searchByName(Request $request){
+//
+//        $pets = [
+//            'name' => $request->input('name'),
+//        ];
+//        PuppyRepos::SearchByName($request);
+//        return view('puppywebsite.index', [
+//          'pets' => $pets]);
+//    }
+
 }

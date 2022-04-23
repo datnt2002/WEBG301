@@ -26,6 +26,7 @@ Route::prefix('homepage')->group(function () {
         Route::get('/breedDelete/{id}', [PuppyController::class, 'breedConfirm'])->name('breed.confirm');
         Route::post('/breedDelete/{id}', [PuppyController::class, 'breedDelete'])->name('breed.delete');
 
+//        Route::post('')
     });
 
     Route::prefix('customerManager')->group(function () {

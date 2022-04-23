@@ -79,4 +79,8 @@ class PuppyRepos
     {
         DB::table('breeds')->where('id', '=', $id)->delete();
     }
+
+//    public static function SearchByName($name){
+//        DB::table('puppy')->where('name','like',$name)->get();
+//    }
 }

@@ -20,15 +20,15 @@
                                     <div class="carousel-inner" role="listbox" style="height: 500px; width: 100%">
                                         <div class="carousel-item active">
                                             <img class="d-block img-fluid mx-auto"
-                                                 src="{{asset('/images/puppy_images/Amethyst.jpg')}}" alt="First slide" style="width: 100%">
+                                                 src="{{asset('/images/puppy_images/blue.jpg')}}" alt="First slide" >
                                         </div>
                                         <div class="carousel-item">
                                             <img class="d-block img-fluid mx-auto"
-                                                 src="{{asset('/images/puppy_images/jiggly.jpg')}}" alt="Second slide">
+                                                 src="{{asset('/images/puppy_images/Bonita.jpg')}}" alt="Second slide">
                                         </div>
                                         <div class="carousel-item">
                                             <img class="d-block img-fluid mx-auto"
-                                                 src="{{asset('/images/puppy_images/Rudolph.jpg')}}" alt="Third slide">
+                                                 src="{{asset('/images/puppy_images/chico.jpg')}}" alt="Third slide">
                                         </div>
                                     </div>
                                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
@@ -53,7 +53,7 @@
                             <div class="col-md-6 col-xl-3" style="margin-top:30px">
                                 <!-- project card -->
 
-                                <div class="card d-block" style="width: 379px;height: 400px; margin: 50px 50px">
+                                <div class="card d-block" style="width: 330px; height: 350px; margin: 50px 50px">
                                     <!-- project-thumbnail -->
                                     <img class="card-img-top" src="{{$each->image}}"
                                          alt="project image cap" style="height: 100%; width:100%">
