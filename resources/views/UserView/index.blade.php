@@ -16,7 +16,7 @@
                         <div class="col-lg-12" >
 {{--                            <div class="card" >--}}
                                 <div id="carouselExampleControls" class="carousel slide "
-                                     data-ride="carousel" style="height: 500px">
+                                     data-ride="carousel" style="height: 500px;">
                                     <div class="carousel-inner" role="listbox" style="height: 500px; width: 100%">
                                         <div class="carousel-item active">
                                             <img class="d-block img-fluid mx-auto"

@@ -24,7 +24,7 @@ class PuppyRepos
         return DB::select($sql);
     }
 
-    public function FindPetByName($pet)
+    public static function FindPetByName($pet)
     {
         $search = '%'.$pet.'%';
         $sql = " select * from puppy join breeds on puppy.breedsID = breeds.id where puppy.name LIKE ? ";
