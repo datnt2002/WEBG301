@@ -1,5 +1,7 @@
 <div class="navbar-custom topnav-navbar topnav-navbar-dark" style="position: sticky">
+
     <div class="container-fluid">
+
         <!-- LOGO -->
         <a href="{{Route('user.view')}}" class="topnav-logo">
                                 <span class="topnav-logo-lg">
@@ -24,12 +26,13 @@
                     </form>
                 </div>
             </li>
+            
         </ul>
         <div class="app-search dropdown">
-            <form>
+            <form action="{{route('FindPetByName')}}" method="get">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search..." id="top-search"
-                           style="border-radius: 15px; margin-right: 15px">
+                           style="border-radius: 15px; margin-right: 15px" name="petname">
                     <span class="mdi mdi-magnify search-icon"></span>
                     <div class="input-group-append">
                         <button class="btn btn-primary" type="submit" style="border-radius: 15px">Search</button>
@@ -38,4 +41,9 @@
             </form>
         </div>
     </div>
+
+
 </div>
+
+
+
