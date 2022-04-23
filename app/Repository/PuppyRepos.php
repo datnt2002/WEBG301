@@ -8,16 +8,28 @@ class PuppyRepos
 {
     public static function GetAllPet()
     {
-        $result = DB::table('puppy')->join('breeds', 'puppy.breedsID', '=', 'breeds.id')
-            ->select('puppy.*',
-                'breeds.*')->get();
-        return $result;
+        $sql = "select * from puppy join breeds on puppy.breedsID = breeds.id";
+        return DB::select($sql);
+//        $result = DB::table('puppy')->join('breeds', 'puppy.breedsID', '=', 'breeds.id')
+//            ->select('puppy.*',
+//                'breeds.*')->get();
+//        return $result;
     }
 
     public static function GetAllBreeds()
     {
-        $result = DB::table('breeds')->get();
-        return $result;
+        $sql = "select * from breeds";
+//        $result = DB::table('breeds')->get();
+//        return $result;
+        return DB::select($sql);
+    }
+
+    public function FindPetByName($pet)
+    {
+        $search = '%'.$pet.'%';
+        $sql = " select * from puppy join breeds on puppy.breedsID = breeds.id where puppy.name LIKE ? ";
+//        dd(DB::getQueryLog());
+        return DB::select($sql, [$search]);
     }
 
     public static function GetBreedByID($id)

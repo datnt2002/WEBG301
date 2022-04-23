@@ -1,5 +1,7 @@
 @extends('PuppyWebsiteMaster.PuppyMaster')
 @section('main')
+    @include('partials.adminNav')
+    @include('partials.LeftNav')
     <div class="container-fluid">
         <div class="content-page" style="padding: 0 0px 100px 0px">
             <div class="content">
