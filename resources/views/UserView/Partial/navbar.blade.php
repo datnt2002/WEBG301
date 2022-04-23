@@ -26,10 +26,10 @@
                     </form>
                 </div>
             </li>
-            
+
         </ul>
         <div class="app-search dropdown">
-            <form action="{{route('FindPetByName')}}" method="get">
+            <form action="{{route('user.FindPetByName')}}" method="get">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search..." id="top-search"
                            style="border-radius: 15px; margin-right: 15px" name="petname">
