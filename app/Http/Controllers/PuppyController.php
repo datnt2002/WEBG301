@@ -16,6 +16,7 @@ class PuppyController extends Controller
             'pets' => $pets
         ]);
     }
+
     public function SearchPet()
     {
         $pet = $_GET['petname'];
@@ -25,6 +26,7 @@ class PuppyController extends Controller
             'pets' => $result
         ]);
     }
+
     public function GetAllBreed()
     {
         $breed = PuppyRepos::GetAllBreeds();
@@ -38,7 +40,7 @@ class PuppyController extends Controller
         $breed = [
             'breed' => $rq->breed
         ];
-        PuppyRepos::UpdateBreed($breed,$id);
+        PuppyRepos::UpdateBreed($breed, $id);
         return redirect()->route('puppy.breed');
     }
 
@@ -49,11 +51,13 @@ class PuppyController extends Controller
             'breed' => $breed
         ]);
     }
+
     public function breedDelete($id)
     {
         PuppyRepos::DeleteBreed($id);
         return redirect()->Route('puppy.breed');
     }
+
     public function breedConfirm($id)
     {
         $breed = PuppyRepos::GetBreedByID($id);
@@ -61,18 +65,19 @@ class PuppyController extends Controller
             'breed' => $breed
         ]);
     }
+
     public function create()
     {
         $breed = PuppyRepos::GetAllBreeds();
 
         return view('puppywebsite.create', [
                 'breed' => $breed,
-                'pet' => (object)[
+                'pet' => (object) [
                     'Pid' => '',
                     'name' => '',
                     'area' => '',
                     'breedID' => '',
-                    'image' => '/images/puppy_images/' . '',
+                    'image' => '/images/puppy_images/'.'',
                     'color' => '',
                     'detail' => '',
                 ],
@@ -85,7 +90,7 @@ class PuppyController extends Controller
     {
         return view('puppywebsite.createBreed', [
 
-                'Breed' => (object)[
+                'Breed' => (object) [
                     'breed' => ''
                 ]
             ]
@@ -95,7 +100,7 @@ class PuppyController extends Controller
     public function storeBreed(Request $rq)
     {
 //        $this->validationBreed($rq)->validate();
-        $Breed = [
+        $Breed = (object) [
             'breed' => $rq->input('breed')
         ];
         PuppyRepos::StoreBreed($Breed);
@@ -105,12 +110,12 @@ class PuppyController extends Controller
     public function store(Request $rq)
     {
         $this->validation($rq)->validate();
-        $pet = [
+        $pet = (object) [
             'name' => $rq->input('name'),
             'area' => $rq->area,
             'breed' => $rq->Breed,
             'gender' => $rq->gender,
-            'image' => '/images/puppy_images/' . $rq->image,
+            'image' => '/images/puppy_images/'.$rq->image,
             'color' => $rq->color,
             'detail' => $rq->detail
         ];
@@ -123,7 +128,8 @@ class PuppyController extends Controller
     {
         $pets = PuppyRepos::GetPetByID($id);
         $breed = PuppyRepos::GetAllBreeds();
-        return view('puppywebsite.update', [
+        return view('puppywebsite.update',
+             [
             'pets' => $pets,
             'breed' => $breed
         ]);
@@ -132,18 +138,18 @@ class PuppyController extends Controller
     public function update(Request $rq, $id)
     {
         $this->validation($rq)->validate();
-        $pet = [
+        $pet = (object)[
             'id' => $rq->input('Pid'),
             'name' => $rq->input('name'),
             'area' => $rq->input('area'),
             'breed' => $rq->input('Breed'),
             'gender' => $rq->input('gender'),
-            'image' => '/images/puppy_images/' . $rq->input('image'),
+            'image' => '/images/puppy_images/'.$rq->input('image'),
             'color' => $rq->input('color'),
             'detail' => $rq->input('detail')
         ];
         PuppyRepos::update($id, $pet);
-        return redirect()->route('user.account');
+        return redirect()->route('puppy.index');
     }
 
 

@@ -19,9 +19,9 @@ class PuppyRepos
     public static function GetAllBreeds()
     {
         $sql = "select * from breeds";
+        return DB::select($sql);
 //        $result = DB::table('breeds')->get();
 //        return $result;
-        return DB::select($sql);
     }
 
     public function FindPetByName($pet)
@@ -34,46 +34,71 @@ class PuppyRepos
 
     public static function GetBreedByID($id)
     {
-        return DB::table('breeds')->where('id', '=', $id)->get();
+        $sql = "select * from breeds where id=$id";
+        return DB::select($sql);
+//        return DB::table('breeds')->where('id', '=', $id)->get();
 
     }
 
     public static function GetPetByID($id)
     {
-        return DB::table('puppy')->where('pid', '=', $id)->get();
+        $sql = "select * from puppy where Pid = $id";
+        return DB::select($sql);
+//        return DB::table('puppy')->where('pid', '=', $id)->get();
     }
 
     public static function Store($pet)
     {
-        DB::table('puppy')->insert([
-            'name' => $pet['name'],
-            'gender' => $pet['gender'],
-            'area' => $pet['area'],
-            'breedsID' => $pet['breed'],
-            'detail' => $pet['detail'],
-            'color' => $pet['color'],
-            'image' => $pet['image']
+        $sql = "insert into puppy(name,gender,area,breedsID,detail,color,image) values (?,?,?,?,?,?,?)";
+        DB::insert($sql, [
+            $pet->name,
+            $pet->gender,
+            $pet->area,
+            $pet->breed,
+            $pet->detail,
+            $pet->color,
+            $pet->image
+//            'name' => $pet['name'],
+//            'gender' => $pet['gender'],
+//            'area' => $pet['area'],
+//            'breedsID' => $pet['breed'],
+//            'detail' => $pet['detail'],
+//            'color' => $pet['color'],
+//            'image' => $pet['image']
         ]);
     }
 
     public static function StoreBreed($Breed)
     {
-        DB::table('breeds')->insert([
-            'bread' => $Breed['breed']
-        ]);
+//        DB::table('breeds')->insert([
+//            'bread' => $Breed['breed']
+//        ]);
+        $sql = " insert into breeds (bread) values (?) ";
+        DB::insert($sql,[$Breed->breed]);
     }
 
     public static function Update($id, $pet)
     {
-        DB::table('puppy')->where('Pid', '=', $id)->update([
-            'name' => $pet['name'],
-            'gender' => $pet['gender'],
-            'area' => $pet['area'],
-            'breedsID' => $pet['breed'],
-            'detail' => $pet['detail'],
-            'color' => $pet['color'],
-            'image' => $pet['image']
+        $sql = "update puppy set name=?,gender=?,area=?,breedsID=?,detail=?,color=?,image=? where Pid=$id";
+        DB::update($sql,[
+            $pet->name,
+            $pet->gender,
+            $pet->area,
+            $pet->breed,
+            $pet->detail,
+            $pet->color,
+            $pet->image
         ]);
+
+//        DB::table('puppy')->where('Pid', '=', $id)->update([
+//            'name' => $pet['name'],
+//            'gender' => $pet['gender'],
+//            'area' => $pet['area'],
+//            'breedsID' => $pet['breed'],
+//            'detail' => $pet['detail'],
+//            'color' => $pet['color'],
+//            'image' => $pet['image']
+//        ]);
     }
 
     public static function UpdateBreed($breed, $id)
@@ -87,6 +112,7 @@ class PuppyRepos
     {
         DB::table('puppy')->where('Pid', '=', $id)->delete();
     }
+
     public static function DeleteBreed($id)
     {
         DB::table('breeds')->where('id', '=', $id)->delete();
