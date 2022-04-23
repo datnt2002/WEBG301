@@ -113,9 +113,9 @@
                                     <input class="btn btn-primary btn-lg" type="submit" value="Submit"/>
                                 </div>
 
-                                <div class="signup_link">
-                                    Have a account? <a href="{{route('admin.login')}}">Sign in</a>
-                                </div>
+{{--                                <div class="signup_link">--}}
+{{--                                    Have a account? <a href="{{route('admin.login')}}">Sign in</a>--}}
+{{--                                </div>--}}
 
                             </form>
                         </div>

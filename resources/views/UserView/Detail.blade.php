@@ -1,4 +1,4 @@
-@extends('PuppyWebsiteMaster.PuppyMaster')
+@extends('UserView.UserMaster.UserMaster')
 @section('css')
     <link rel="stylesheet" href="{{asset('css/vendor/dataTables.bootstrap4.css')}}">
     <link rel="stylesheet" href="{{asset('css/vendor/responsive.bootstrap4.css')}}">
