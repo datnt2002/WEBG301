@@ -53,16 +53,17 @@
                             <div class="col-md-6 col-xl-3" style="margin-top:30px">
                                 <!-- project card -->
 
-                                <div class="card d-block" style="width: 379px">
+                                <div class="card d-block" style="width: 379px;height: 400px; margin: 50px 50px">
                                     <!-- project-thumbnail -->
                                     <img class="card-img-top" src="{{$each->image}}"
-                                         alt="project image cap" style="height: 300px; width:100%">
+                                         alt="project image cap" style="height: 100%; width:100%">
 
                                     <div class="card-body position-relative">
                                         <!-- project title-->
                                         <h4 class="mt-0">
-                                            <a href="{{Route('Pet.Detail',['id'=>$each->Pid])}}" class="text-title">{{$each->name}}
+                                            <a href="{{Route('Pet.Detail',['id'=>$each->Pid])}}" class="text-title">{{$each->name}}</a>
                                         </h4>
+
                                         <!-- project detail-->
                                         <p class="mb-3">
                                             <span class="pr-2 text-nowrap">

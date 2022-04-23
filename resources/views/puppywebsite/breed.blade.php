@@ -15,7 +15,7 @@
                             <td class="table-action">
                                 <a href="{{Route('breed.update',['id'=>$each->id])}}" class="action-icon">
                                     <i class="mdi mdi-pencil"></i></a>
-                                <a href="#" class="action-icon">
+                                <a href="{{Route('breed.confirm',['id'=>$each->id])}}" class="action-icon">
                                     <i class="mdi mdi-delete"></i></a>
                             </td>
                         </tr>

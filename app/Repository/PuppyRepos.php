@@ -75,4 +75,8 @@ class PuppyRepos
     {
         DB::table('puppy')->where('Pid', '=', $id)->delete();
     }
+    public static function DeleteBreed($id)
+    {
+        DB::table('breeds')->where('id', '=', $id)->delete();
+    }
 }
