@@ -51,21 +51,21 @@
                                         <span> Breed </span>
                                     </a>
                                 </li>
-                                <li class="side-nav-item">
-                                    <a href="javascript: void(0);" class="side-nav-link" aria-expanded="false">
-                                        <i class="uil-store"></i>
-                                        <span> Ecommerce </span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
-                                    <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
-                                        <li>
-                                            <a href="apps-ecommerce-products.html">Products</a>
-                                        </li>
-                                        <li>
-                                            <a href="apps-ecommerce-products-details.html">Products Details</a>
-                                        </li>
-                                    </ul>
-                                </li>
+{{--                                <li class="side-nav-item">--}}
+{{--                                    <a href="javascript: void(0);" class="side-nav-link" aria-expanded="false">--}}
+{{--                                        <i class="uil-store"></i>--}}
+{{--                                        <span> Ecommerce </span>--}}
+{{--                                        <span class="menu-arrow"></span>--}}
+{{--                                    </a>--}}
+{{--                                    <ul class="side-nav-second-level mm-collapse" aria-expanded="false">--}}
+{{--                                        <li>--}}
+{{--                                            <a href="apps-ecommerce-products.html">Products</a>--}}
+{{--                                        </li>--}}
+{{--                                        <li>--}}
+{{--                                            <a href="apps-ecommerce-products-details.html">Products Details</a>--}}
+{{--                                        </li>--}}
+{{--                                    </ul>--}}
+{{--                                </li>--}}
                             </ul>
 
                             <!-- End Sidebar -->

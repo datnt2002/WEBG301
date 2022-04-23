@@ -4,6 +4,7 @@
     @include('partials.LeftNav')
     <div class="container-fluid">
         <div class="content-page" style="padding: 0 0 100px 0">
+            <h1>Breed Management</h1>
             <div class="content">
                 <table class="table table-striped table-centered mb-0 ">
                     <tr>
