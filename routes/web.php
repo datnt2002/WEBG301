@@ -24,13 +24,16 @@ Route::prefix('homepage')->group(function () {
         Route::post('/breedUpdate/{id}', [PuppyController::class, 'breedEdit'])->name('breed.Edit');
 
         Route::get('/search', [PuppyController::class, 'SearchPet'])->name('FindPetByName');
+        Route::get('/breedDelete/{id}', [PuppyController::class, 'breedConfirm'])->name('breed.confirm');
+        Route::post('/breedDelete/{id}', [PuppyController::class, 'breedDelete'])->name('breed.delete');
+
     });
 
     Route::prefix('customerManager')->group(function () {
         Route::get('/account', [RegisterController::class, 'userAccount'])->name('user.account');
         Route::get('/update/{id}', [RegisterController::class, 'editCustomer'])->name('user.edit');
         Route::post('/update/{id}', [RegisterController::class, 'updateCustomer'])->name('user.update');
-//        Route::get('/delete/{id}', [RegisterController::class, 'confirmCustomer'])->name('user.confirm');
+        Route::get('/delete/{id}', [RegisterController::class, 'confirmCustomer'])->name('user.confirm');
         Route::post('/delete/{id}', [RegisterController::class, 'deleteCustomer'])->name('user.delete');
 
     });

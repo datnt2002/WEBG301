@@ -49,7 +49,18 @@ class PuppyController extends Controller
             'breed' => $breed
         ]);
     }
-
+    public function breedDelete($id)
+    {
+        PuppyRepos::DeleteBreed($id);
+        return redirect()->Route('puppy.breed');
+    }
+    public function breedConfirm($id)
+    {
+        $breed = PuppyRepos::GetBreedByID($id);
+        return view('puppywebsite.confirmBreed', [
+            'breed' => $breed
+        ]);
+    }
     public function create()
     {
         $breed = PuppyRepos::GetAllBreeds();

@@ -22,11 +22,11 @@
                 <label>Password</label>
             </div>
 
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" style="margin-bottom: 50px">
 
-            <div class="signup_link">
-                Not a member? <a href="{{route('user.register')}}">Sign up</a>
-            </div>
+{{--            <div class="signup_link">--}}
+{{--                Not a member? <a href="{{route('user.register')}}">Sign up</a>--}}
+{{--            </div>--}}
         </form>
     </div>
 @endsection
