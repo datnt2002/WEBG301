@@ -21,7 +21,9 @@
                 <span></span>
                 <label>Password</label>
             </div>
-
+            @error('msg')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
             <input type="submit" value="Login" style="margin-bottom: 50px">
 
 {{--            <div class="signup_link">--}}
