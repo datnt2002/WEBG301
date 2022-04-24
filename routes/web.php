@@ -45,7 +45,7 @@ Route::prefix('homepage')->group(function () {
 
 Route::prefix('Main')->group(function () {
     Route::get('/', [Usercontroller::class, 'index'])->name('user.view');
-    Route::get('/search', [UserController::class, 'ClientSearchPet'])->name('FindPetByName');
+    Route::get('/search', [UserController::class, 'ClientSearchPet'])->name('user.FindPetByName');
     Route::get('/Detail/{id}', [Usercontroller::class, 'GetPetById'])->name('Pet.Detail');
     Route::get('/Filter/{id}', [UserController::class, 'FilterPet'])->name('FilterPet');
 
