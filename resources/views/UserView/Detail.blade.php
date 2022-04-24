@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{asset('css/vendor/responsive.bootstrap4.css')}}">
 @endsection
 @section('main')
-    @include('UserView.Partial.navbar')
+{{--    @include('UserView.Partial.navbar')--}}
 
     <div class="row" style="padding-top: 50px">
         <div class="col-md-6 col-lg-6">

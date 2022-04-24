@@ -44,6 +44,8 @@ class Usercontroller extends Controller
             'pets' => $result
         ]);
     }
-
+    public function AboutUs(){
+        return view('UserView.aboutus');
+    }
 
 }

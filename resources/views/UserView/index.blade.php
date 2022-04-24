@@ -6,7 +6,7 @@
 @endsection
 
 @section('main')
-{{--    @include('UserView.Partial.leftnav')--}}
+    {{--    @include('UserView.Partial.leftnav')--}}
     @include('UserView.Partial.navbar')
     {{--@include('UserView.Partial.leftnav')--}}
     <div id="carouselExampleControls" class="carousel slide "
@@ -14,7 +14,7 @@
         <div class="carousel-inner" role="listbox" style="height: 100%; width: 100%">
             <div class="carousel-item active">
                 <img class="d-block img-fluid mx-auto"
-                     src="{{asset('/images/puppy_images/echo.jpg')}}" alt="First slide">
+                     src="{{asset('/images/puppy_images/bg.jpg')}}" alt="First slide">
                 <div class="carousel-caption d-none d-md-block" style="height: 100%;">
                     <h2>Welcome to PECA</h2>
                     <h3 class="text-white">Find your new best friend</h3>
@@ -23,7 +23,7 @@
             </div>
             <div class="carousel-item">
                 <img class="d-block img-fluid mx-auto"
-                     src="{{asset('/images/puppy_images/chunky.jpg')}}" alt="Second slide">
+                     src="{{asset('/images/puppy_images/big.jpg')}}" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block" style="height: 100%;">
                     <h2>Welcome to PECA</h2>
                     <h3 class="text-white">Find your new best friend</h3>
@@ -32,7 +32,7 @@
             </div>
             <div class="carousel-item">
                 <img class="d-block img-fluid mx-auto"
-                     src="{{asset('/images/puppy_images/max.jpg')}}" alt="Third slide">
+                     src="{{asset('/images/puppy_images/carousel2.jpg')}}" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block" style="height: 100%;">
                     <h2>Welcome to PECA</h2>
                     <h3 class="text-white">Find your new best friend</h3>
@@ -56,6 +56,7 @@
             {{--            @include('UserView.Partial.leftnav')--}}
             <div class="content-page">
                 <div class="content">
+
                     <div class="row">
                         @foreach($pets as $each)
                             <div class="col-md-6 col-xl-3" style="margin-top:30px">
@@ -101,44 +102,14 @@
                                     </div> <!-- end card-body-->
                                 </div> <!-- end card-->
                             </div>
-                    @endforeach<!-- end col -->
+                        @endforeach<!-- end col -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <section id="aboutsection" class="About-custom">
-        <div>
-            <h2 style="font-size: 2rem;">About Us</h2>
-        </div>
-        <br/>
-        <div style="text-align: center;">
-            <h2 style="font-size: 2rem;">PECA Puppy</h2>
-            <h4>Do Nguyen Huy Hoang and Nguyen Trong Dat</h4>
-        </div>
-        <div class="row" style="text-align: center; padding-top: 30px">
-            <div class="col-lg-4">
-                <i class="fas fa-address-card" style="font-size: 50px;"></i>
-                <h4>Do Nguyen Huy Hoang and Nguyen Trong Dat</h4>
-                <br>
-                <p>2 Founder of PECA puppy shop with the mission loving pets.</p>
-            </div>
-            <div class="col-lg-4">
-                <i class="fas fa-building" style="font-size: 50px;"></i>
-                <h4>Shop</h4>
-                <br>
-                <p>PECA has 3 locations nationwide. Ready to serve you at any time.</p>
-            </div>
-            <div class="col-lg-4">
-                <i class="fas fa-phone" style="font-size: 50px;"></i>
-                <h4>Support</h4>
-                <br>
-                <p>Telephone: 0123456789</p>
-                <p>Address: Hanoi-Vietnam</p>
-            </div>
-        </div>
-    </section>
+
 
     @include('UserView.Partial.footer')
 @endsection

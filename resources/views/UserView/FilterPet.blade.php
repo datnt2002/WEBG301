@@ -14,7 +14,7 @@
         <div class="carousel-inner" role="listbox" style="height: 100%; width: 100%">
             <div class="carousel-item active">
                 <img class="d-block img-fluid mx-auto"
-                     src="{{asset('/images/puppy_images/echo.jpg')}}" alt="First slide">
+                     src="{{asset('/images/puppy_images/bg.jpg')}}" alt="First slide">
                 <div class="carousel-caption d-none d-md-block" style="height: 100%;">
                     <h2>Welcome to PECA</h2>
                     <h3 class="text-white">Find your new best friend</h3>
@@ -23,7 +23,7 @@
             </div>
             <div class="carousel-item">
                 <img class="d-block img-fluid mx-auto"
-                     src="{{asset('/images/puppy_images/chunky.jpg')}}" alt="Second slide">
+                     src="{{asset('/images/puppy_images/big.jpg')}}" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block" style="height: 100%;">
                     <h2>Welcome to PECA</h2>
                     <h3 class="text-white">Find your new best friend</h3>
@@ -32,7 +32,7 @@
             </div>
             <div class="carousel-item">
                 <img class="d-block img-fluid mx-auto"
-                     src="{{asset('/images/puppy_images/max.jpg')}}" alt="Third slide">
+                     src="{{asset('/images/puppy_images/carousel2.jpg')}}" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block" style="height: 100%;">
                     <h2>Welcome to PECA</h2>
                     <h3 class="text-white">Find your new best friend</h3>
@@ -109,33 +109,51 @@
     </div>
 
     <section id="aboutsection" class="About-custom">
+
         <div>
-            <h2 style="font-size: 2rem;">About Us</h2>
+            <h1 style="font-size: 2rem; text-align: center;">About Us</h1>
         </div>
         <br/>
+
         <div style="text-align: center;">
             <h2 style="font-size: 2rem;">PECA Puppy</h2>
-            <h4>Do Nguyen Huy Hoang and Nguyen Trong Dat</h4>
+
         </div>
+        <div class="row col-lg-12">
+            <div class="col-lg-6">
+                <div class="map row">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1862.1078727215474!2d105.7901535!3d21.0240518!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b329f68977%3A0x6ddf5ff1e829fc56!2zxJDhuqFpIEjhu41jIEdyZWVud2ljaA!5e0!3m2!1svi!2s!4v1650813917367!5m2!1svi!2s"
+                        width="600" height="450" style="border:0; margin-top: 15px" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <h3><i class="fas fa-address-card" style="font-size: 30px;"></i> Do Nguyen Huy Hoang and Nguyen Trong
+                    Dat</h3>
+                <p style="font-size: 20px">2 Founder of PECA puppy shop with the mission loving pets.</p>
+
+                <h3><i class="fas fa-building" style="font-size: 30px;"></i> Address</h3>
+
+                <p style="font-size: 20px">2 Pham Van Bach - Dich Vong - Cau Giay - Ha Noi</p>
+
+                <h3><i class="fas fa-phone" style="font-size: 30px;"></i> Support</h3>
+                <p style="font-size: 20px">Telephone: 0123456789</p>
+                <p style="font-size: 20px">Email 1: Datntgch200102@fpt.edu.vn</p>
+                <p style="font-size: 20px">Email 2: Datntgch200102@fpt.edu.vn</p>
+
+            </div>
+        </div>
+
+
         <div class="row" style="text-align: center; padding-top: 30px">
+
             <div class="col-lg-4">
-                <i class="fas fa-address-card" style="font-size: 50px;"></i>
-                <h4>Do Nguyen Huy Hoang and Nguyen Trong Dat</h4>
-                <br>
-                <p>2 Founder of PECA puppy shop with the mission loving pets.</p>
+
             </div>
             <div class="col-lg-4">
-                <i class="fas fa-building" style="font-size: 50px;"></i>
-                <h4>Shop</h4>
-                <br>
-                <p>PECA has 3 locations nationwide. Ready to serve you at any time.</p>
-            </div>
-            <div class="col-lg-4">
-                <i class="fas fa-phone" style="font-size: 50px;"></i>
-                <h4>Support</h4>
-                <br>
-                <p>Telephone: 0123456789</p>
-                <p>Address: Hanoi-Vietnam</p>
+
             </div>
         </div>
     </section>
