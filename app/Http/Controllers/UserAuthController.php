@@ -32,7 +32,7 @@ class UserAuthController extends Controller
         if ($checklogin > 0) {
             Session::put('username', $request->input('username'));
             return redirect()->Route('puppy.index');
-        } else return redirect()->back();
+        } else return redirect()->back()->withErrors(['msg'=>'Wrong username or password'])->withInput();
 
     }
 
