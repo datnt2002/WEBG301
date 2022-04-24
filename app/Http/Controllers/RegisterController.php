@@ -21,7 +21,7 @@ class RegisterController extends Controller
     public function index()
     {
         return view('UserAuth.register', [
-            'user' => (object)[
+            'user' => (object) [
                 'fullName' => '',
                 'email' => '',
                 'address' => '',

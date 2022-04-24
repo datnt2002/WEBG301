@@ -13,7 +13,6 @@ class UserAuth
         $users = DB::table('users')->select('users.*')->get();
         return $users;
     }
-
     public static function GetUserByID($id)
     {
         return DB::table('users')->where('Cid', '=', $id)->get();
@@ -30,7 +29,6 @@ class UserAuth
         return count(DB::select($sql));
 //        return DB::table('admin')->where(['username' => $username, 'password' => md5($password)])->count();
     }
-
     public static function store($users)
     {
         DB::table('users')->insert([
@@ -54,7 +52,6 @@ class UserAuth
             'password' => $users['password'],
         ]);
     }
-
     public static function delete($id)
     {
         DB::table('users')->where('Cid', '=', $id)->delete();

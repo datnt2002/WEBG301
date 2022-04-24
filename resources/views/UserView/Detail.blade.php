@@ -4,8 +4,7 @@
     <link rel="stylesheet" href="{{asset('css/vendor/responsive.bootstrap4.css')}}">
 @endsection
 @section('main')
-    @include('UserView.Partial.navbar')
-
+{{--    @include('UserView.Partial.navbar')--}}
     <div class="row" style="padding-top: 50px">
         <div class="col-md-6 col-lg-6">
             <img class="card-img-top" src="{{$pet[0]->image}}" alt="Dog detail" style="object-fit: cover; height: 500px; width: 600px;margin-left: 100px; margin-bottom: 30px">
