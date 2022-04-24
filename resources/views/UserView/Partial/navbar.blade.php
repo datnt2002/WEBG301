@@ -26,7 +26,7 @@
                     </form>
                 </div>
             </li>
-            
+
         </ul>
         <div class="app-search dropdown">
             <form action="{{route('FindPetByName')}}" method="get">
@@ -40,10 +40,28 @@
                 </div>
             </form>
         </div>
+        <ul class="list-unstyled topbar-right-menu float-left mb-0">
+            <li class="dropdown notification-list topbar-dropdown">
+                <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button"
+                   aria-haspopup="false" aria-expanded="false">
+                    <i class="uil-github"></i>
+                    <span class="align-middle d-none d-sm-inline-block">Breed</span> <i
+                        class="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu">
+                    <!-- item-->
+                    @foreach($breed as $each)
+                        <a href="{{Route('FilterPet',[$each->id])}}" class="dropdown-item notify-item">
+                            <span class="align-middle">{{$each->bread}}</span>
+                        </a>
+                    @endforeach
+                </div>
+            </li>
+        </ul>
     </div>
-
-
 </div>
+
+
 
 
 

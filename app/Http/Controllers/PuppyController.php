@@ -22,7 +22,7 @@ class PuppyController extends Controller
         $pet = $_GET['petname'];
         $result = PuppyRepos::FindPetByName($pet);
 //        dd($result);
-        return view('Userview.index', [
+        return view('puppywebsite.index', [
             'pets' => $result
         ]);
     }
