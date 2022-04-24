@@ -8,11 +8,17 @@ class User
 {
     public static function GetAllPet()
     {
-        return DB::table('puppy')->join('breeds', 'puppy.breedsID', '=', 'breeds.id')
-            ->select('puppy.*',
-                'breeds.*')->get();
+        $sql = "select * from puppy join breeds on puppy.breedsID =  breeds.id  ";
+        return DB::select($sql);
+//        return DB::table('puppy')->join('breeds', 'puppy.breedsID', '=', 'breeds.id')
+//            ->select('puppy.*',
+//                'breeds.*')->get();
     }
-    public static function GetPetByID($id){
-        return DB::table('puppy')->where('Pid','=',$id)->get();
+
+    public static function GetPetByID($id)
+    {
+        $sql = "select * from puppy join breeds on puppy.breedsID =  breeds.id where breeds.id = $id";
+        return DB::select($sql);
+//        return DB::table('puppy')->where('Pid', '=', $id)->get();
     }
 }

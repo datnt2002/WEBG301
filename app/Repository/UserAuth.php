@@ -8,10 +8,12 @@ use App\Http\Controllers\UserAuthController;
 
 class UserAuth
 {
-    public static function GetAllAccount(){
+    public static function GetAllAccount()
+    {
         $users = DB::table('users')->select('users.*')->get();
         return $users;
     }
+
     public static function GetUserByID($id)
     {
         return DB::table('users')->where('Cid', '=', $id)->get();
@@ -24,10 +26,11 @@ class UserAuth
 //    }
     public static function login($username, $password)
     {
-//        $sql = "SELECT * FROM admin WHERE username='".$username."' AND password='".md5($password)."'";
-//        return DB::select($sql);
-        return DB::table('admin')->where(['username' => $username, 'password' => md5($password)])->count();
+        $sql = "SELECT * FROM admin WHERE username='" . $username . "' AND password='" . sha1($password) . "'";
+        return count(DB::select($sql));
+//        return DB::table('admin')->where(['username' => $username, 'password' => md5($password)])->count();
     }
+
     public static function store($users)
     {
         DB::table('users')->insert([
@@ -51,6 +54,7 @@ class UserAuth
             'password' => $users['password'],
         ]);
     }
+
     public static function delete($id)
     {
         DB::table('users')->where('Cid', '=', $id)->delete();

@@ -6,7 +6,7 @@
 @endsection
 
 @section('main')
-{{--    @include('UserView.Partial.leftnav')--}}
+    {{--    @include('UserView.Partial.leftnav')--}}
     @include('UserView.Partial.navbar')
     {{--@include('UserView.Partial.leftnav')--}}
     <div id="carouselExampleControls" class="carousel slide "
@@ -57,7 +57,7 @@
             <div class="content-page">
                 <div class="content">
                     <div class="row">
-                        @foreach($pets as $each)
+                        @foreach($pet as $each)
                             <div class="col-md-6 col-xl-3" style="margin-top:30px">
                                 <!-- project card -->
 

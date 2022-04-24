@@ -11,10 +11,22 @@ class Usercontroller extends Controller
     public function index()
     {
         $pets = User::GetAllPet();
+        $breeds = PuppyRepos::GetAllBreeds();
         return view('Userview.index', [
-            'pets' => $pets
+            'pets' => $pets,
+            'breed' => $breeds
         ]);
 
+    }
+
+    public function FilterPet($id)
+    {
+        $breeds = PuppyRepos::GetAllBreeds();
+        $pet = User::GetPetByID($id);
+        return view('Userview.FilterPet', [
+            'pet' => $pet,
+            'breed' => $breeds
+        ]);
     }
 
     public function GetPetById($id)
@@ -22,6 +34,7 @@ class Usercontroller extends Controller
         $pet = User::GetPetByID($id);
         return view('UserView.Detail', ['pet' => $pet]);
     }
+
     public function ClientSearchPet()
     {
         $pet = $_GET['petname'];
@@ -31,5 +44,6 @@ class Usercontroller extends Controller
             'pets' => $result
         ]);
     }
+
 
 }
