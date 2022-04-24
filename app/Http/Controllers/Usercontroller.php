@@ -42,11 +42,13 @@ class Usercontroller extends Controller
 
     public function ClientSearchPet()
     {
+        $breeds = PuppyRepos::GetAllBreeds();
         $pet = $_GET['petname'];
         $result = PuppyRepos::FindPetByName($pet);
 //        dd($result);
         return view('UserView.index', [
-            'pets' => $result
+            'pets' => $result,
+            'breed' => $breeds
         ]);
     }
     public function AboutUs(){
