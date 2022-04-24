@@ -63,7 +63,7 @@
 
                                         <i class="mdi mdi-delete action-icon" type="button" data-toggle="modal" data-target="#exampleModalScrollable">
 {{--                                    </button>--}}
-                                    @include('puppywebsite.deletemodal')
+                                    @include('puppywebsite.deletePetmodal')
                                 </td>
                             </tr>
                         @endforeach

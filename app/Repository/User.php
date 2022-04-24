@@ -17,7 +17,7 @@ class User
 
     public static function GetPetByID($id)
     {
-        $sql = "select * from puppy join breeds on puppy.breedsID =  breeds.id where breeds.id = $id";
+        $sql = "select * from puppy join breeds on puppy.breedsID = breeds.id where Pid = $id";
         return DB::select($sql);
 //        return DB::table('puppy')->where('Pid', '=', $id)->get();
     }

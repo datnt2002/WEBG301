@@ -31,8 +31,13 @@ class Usercontroller extends Controller
 
     public function GetPetById($id)
     {
-        $pet = User::GetPetByID($id);
-        return view('UserView.Detail', ['pet' => $pet]);
+        $breeds = PuppyRepos::GetAllBreeds();
+        $pets = User::GetPetByID($id);
+        return view('UserView.Detail',
+            [
+                'pet' => $pets,
+                'breed' => $breeds
+            ]);
     }
 
     public function ClientSearchPet()
