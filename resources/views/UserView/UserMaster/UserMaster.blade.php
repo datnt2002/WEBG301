@@ -14,6 +14,7 @@
         rel="stylesheet"
     />
     <link rel="stylesheet" href="{{asset('css/carousel.css')}}">
+    <link rel="shortcut icon" href="{{asset('images/peca-04.png')}}">
     @yield('css')
     <title>Peca puppy</title>
 </head>
