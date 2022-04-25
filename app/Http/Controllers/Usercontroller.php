@@ -22,7 +22,7 @@ class Usercontroller extends Controller
     public function FilterPet($id)
     {
         $breeds = PuppyRepos::GetAllBreeds();
-        $pet = User::GetPetByID($id);
+        $pet = User::GetPetByBreed($id);
         return view('Userview.FilterPet', [
             'pet' => $pet,
             'breed' => $breeds
