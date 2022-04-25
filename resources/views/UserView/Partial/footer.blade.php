@@ -5,9 +5,15 @@
         <!-- Section: Social media -->
         <section class="mb-4">
             <!-- Facebook -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            <a class="btn btn-outline-light btn-floating m-1" href="http://facebook.com/hoanghip108" role="button target='_blank'"
             ><i class="fab fa-facebook-f"></i
-                ></a>
+                >
+            </a>
+
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/profile.php?id=100009220811268" role="button target='_blank'"
+            ><i class="fab fa-facebook-f"></i
+                >
+            </a>
 
             <!-- Twitter -->
             <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
@@ -20,7 +26,7 @@
                 ></a>
 
             <!-- Instagram -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/hoang.hip.108/" role="button"
             ><i class="fab fa-instagram"></i
                 ></a>
 
@@ -30,7 +36,7 @@
                 ></a>
 
             <!-- Github -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/hoanghip108" role="button"
             ><i class="fab fa-github"></i
                 ></a>
         </section>
@@ -47,15 +53,6 @@
                             <strong>Register for our newsletter</strong>
                         </p>
                     </div>
-
-
-                    <div class="col-auto">
-
-                        <a href="{{Route('user.register')}}" class="btn mb-2 bg-dark"
-                           style="border-radius: 15px; color: white; border-color: white"><i
-                                class="mdi mdi-plus-circle mr-2"></i> Register</a>
-                    </div>
-
                 </div>
 
             </form>
@@ -67,47 +64,6 @@
             </p>
         </section>
 
-        <section class="">
-
-            <div class="row">
-
-                <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-white">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 2</a>
-                        </li>
-
-                    </ul>
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-white">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 2</a>
-                        </li>
-
-                    </ul>
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-
-                <!--Grid column-->
-            </div>
-            <!--Grid row-->
-        </section>
         <!-- Section: Links -->
     </div>
     <!-- Grid container -->

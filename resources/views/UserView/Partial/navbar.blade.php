@@ -26,7 +26,10 @@
                     </form>
                 </div>
             </li>
-
+            <a href="{{Route('user.register')}}" class="btn mb-2 bg-dark"
+               style="border-radius: 15px; color: white; border-color: white;margin-top: 15px"><i
+                    class="mdi mdi-plus-circle mr-2"></i> Register
+            </a>
         </ul>
         <div class="app-search dropdown">
             <form action="{{route('user.FindPetByName')}}" method="get">
