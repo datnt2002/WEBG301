@@ -65,14 +65,16 @@ class AdminController extends Controller
 //            'Phone' => ['required'],
             'password' => [
                 'required',
-                function ($atribute, $value, $fail) use ($request) {
+                function ($attribute, $value, $fail) use ($request) {
                     $username = $request->input('username');
                     $admin = AdminRepos::GetAllAccount();
                     $count = 0;
                     for ($i = 0, $iMax = count($admin); $i < $iMax; $i++) {
                         if ($username == $admin[$i]->username) {
                             $value = sha1($request->input('password'));
+
                             if ($value != $admin[$i]->password) {
+
                                 $count += 1;
                                 break;
                             }
