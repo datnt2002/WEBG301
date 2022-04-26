@@ -60,28 +60,29 @@ class AdminController extends Controller
     private function validation($request)
     {
         return Validator::make($request->all(), [
-            'email' => ['required',],
+            'email' => ['required'],
             'phone' => ['required'],
             'gender' => ['required'],
-            'password' => ['required'],
-            function ($atribute, $value, $fail) use ($request) {
-                $username = (new \Symfony\Component\HttpFoundation\Session\Session)->get('username');
-                $admin = AdminRepos::GetAllAccount();
-                $count = 0;
-                for ($i = 0, $iMax = count($admin); $i < $iMax; $i++) {
-                    if ($username == $admin[$i]->username) {
-                        $pwd = sha1($request->input('password'));
-                        if ($pwd != $admin[$i]->password) {
-                            $count += 1;
-                            break;
+            'password' => [
+                'required',
+                function ($atribute, $value, $fail) use ($request) {
+                    $username = $request->input('username');
+                    $admin = AdminRepos::GetAllAccount();
+                    $count = 0;
+                    for ($i = 0, $iMax = count($admin); $i < $iMax; $i++) {
+                        if ($username == $admin[$i]->username) {
+                            $pwd = sha1($request->input('password'));
+                            if ($pwd != $admin[$i]->password) {
+                                $count += 1;
+                                break;
+                            }
                         }
                     }
+                    if ($count != 0) {
+                        $fail('password is incorrect');
+                    }
                 }
-                if ($count != 0) {
-                    $fail('password is incorrect');
-                }
-            }
-
+            ]
         ]);
     }
 }
