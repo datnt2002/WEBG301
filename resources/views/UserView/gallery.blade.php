@@ -8,7 +8,7 @@
 @section('main')
 
     <div class="row">
-        <div class="col-lg-3" style="background-color: #1e1e1e">
+        <div class="col-lg-3" style="background-color: #1e1e1e; max-height: 100%">
             <img src="{{asset('/images/pecaden.png')}}" alt="" style="width: 70px;height: 70px">
             <div class="card" style="width: 18rem;">
                 <div class="card-header">
@@ -48,4 +48,5 @@
             </div>
         </div>
         </div>
+
 @endsection
