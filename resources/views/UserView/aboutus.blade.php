@@ -10,7 +10,7 @@
 
     <div class="container-fluid">
         <div class="card mb-3">
-            <div class="row no-gutters" style="box-shadow: 10px 0px 5px 5px rgba(0, 0, 0, 0.25)">
+            <div class="row no-gutters" style="box-shadow: 10px 0px 5px 5px rgba(0, 0, 0, 0.25); margin-top: 30px">
                 <div class="col-lg-6">
                     <img src="{{asset('/images/puppy_images/about2.jpg')}}" alt="..." style="width: 100%; height: 100%">
                 </div>

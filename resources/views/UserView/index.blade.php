@@ -59,7 +59,7 @@
                         @foreach($pets as $each)
                             <div class="col-md-6 col-xl-3" >
                                 <!-- project card -->
-                                <div class="card d-block text-dark" style="width: 300px; height: 350px; margin: 50px 50px; box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.25),
+                                <div class="card d-block text-dark" style="width: 300px; height: 300px; margin: 50px 50px; box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.25),
   0 5px 15px 0 rgba(0, 0, 0, 0.12)">
                                     <!-- project-thumbnail -->
                                     <img class="card-img-top" src="{{$each->image}}"

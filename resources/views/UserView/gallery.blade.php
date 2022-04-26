@@ -8,45 +8,37 @@
 @section('main')
 
     <div class="row">
-        <div class="col-lg-3" style="background-color: #1e1e1e; max-height: 100%">
-            <img src="{{asset('/images/pecaden.png')}}" alt="" style="width: 70px;height: 70px">
-            <div class="card" style="width: 18rem;">
-                <div class="card-header">
-                    Featured
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
+        <div class="col-lg-3" style="background-color: #1e1e1e; max-height: 100%; text-align: center">
+            <div class="sticky-top">
+            <img src="{{asset('/images/pecaden.png')}}" alt="" style="width: 200px;height: 60px; margin: 100px 0">
+            <h4 style="color: #00bdbd; margin: 30px; padding: 0 25px">We are a creative digital studio
+                and we don't like normal things</h4>
+            <h5 style="color: rgba(200,200,200,0.99); padding: 0 40px">PECA is a creative digital studio based in
+                Italy. We like to experiment and create
+                things that have personality, challenges are
+                our bread and we don't know what limit means.</h5>
+
+            <h5 style="color: rgba(236,236,236,0.99); margin-top: 20px; margin-bottom: 90px">New puppy is coming!</h5>
+
+            <i class=" mdi mdi-facebook" style="color: rgba(239,239,239,0.99); font-size: 25px;"></i>
+            <i class=" mdi mdi-instagram" style="color: rgba(239,239,239,0.99); font-size: 25px"></i>
+
+            <h5 style="color: rgba(226,226,226,0.99);">Datntgch200102@fpt.edu.vn</h5>
+            <h5 style="color: rgba(226,226,226,0.99);">gggggggggggggggggggggggg</h5>
+            <a href="{{route('user.view')}}" style="color: #00bdbd; font-size: 20px">Back to main page</a>
             </div>
         </div>
 
-        <div class="col-lg-9" >
-            <div style="background-color: #000000">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="height: 500px; width: 500px">
-                <div class="carousel-inner" role="listbox" style="height: 100%; width: 100%">
-                    <div class="carousel-item active">
-                        <img class="d-block img-fluid" src="{{asset('/images/puppy_images/bonnie.jpg')}}"
-                             alt="First slide">
+        <div class="col-lg-9" style="padding: unset; background-color: #000000">
+            <div class="container-fluid">
+            <div class="row">
+                @foreach($pets as $pet)
+                    <div class="card d-block" style="height: 300px; width: 300px; margin: 30px">
+                        <img class="card-img-top" src="{{$pet->image}}"
+                             alt="project image cap" style="width: 100%; height: 100%">
                     </div>
-                    @foreach($pets as $pet)
-                        <div class="carousel-item " style="height: 100%">
-                            <img class="card-img-top" src="{{$pet->image}}"
-                                 alt="project image cap">
-                        </div>
-                    @endforeach
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                @endforeach
             </div>
         </div>
         </div>
-
 @endsection
