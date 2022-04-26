@@ -6,8 +6,9 @@
 @endsection
 
 @section('main')
+
     <div class="row">
-        <div class="col-lg-3 mdi-align-horizontal-center" style="background-color: #1e1e1e">
+        <div class="col-lg-3" style="background-color: #1e1e1e">
             <img src="{{asset('/images/pecaden.png')}}" alt="" style="width: 70px;height: 70px">
             <div class="card" style="width: 18rem;">
                 <div class="card-header">
@@ -21,8 +22,9 @@
             </div>
         </div>
 
-        <div class="col-lg-9" style="background-color: #000000">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="col-lg-9" >
+            <div style="background-color: #000000">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="height: 500px; width: 500px">
                 <div class="carousel-inner" role="listbox" style="height: 100%; width: 100%">
                     <div class="carousel-item active">
                         <img class="d-block img-fluid" src="{{asset('/images/puppy_images/bonnie.jpg')}}"
@@ -45,5 +47,5 @@
                 </a>
             </div>
         </div>
-
+        </div>
 @endsection

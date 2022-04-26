@@ -18,7 +18,7 @@
         <h4 class="text-dark" style="margin: 30px 0">Updated: 04-25-2022 | Author: Nguyen Trong Dat</h4>
         <div class="row">
             <div class="col-lg-2">
-                <div id="list-example" class="list-group sticky-top" style="border: none" >
+                <div id="list-example" class="list-group sticky-top" style="border: none; padding-top: 30px" >
                     <h4 style="text-align: center">In this article</h4>
                     <a class="list-group-item list-group-item-action" href="#list-item-1">Introduction</a>
                     <a class="list-group-item list-group-item-action" href="#list-item-2">The Do’s and Don’ts of Dog
@@ -217,7 +217,7 @@
             </div>
 
             <div class="col-lg-3">
-                <div class="card text-center sticky-top" style="width: 18rem; ">
+                <div class="card text-center sticky-top" style="width: 18rem; padding-top: 60px ">
                     <div class="card-body">
                         <h3 class="card-title">Discover puppy</h3>
                         <p class="card-text" style="font-size: 17px">Finding adorable puppy in PECA</p>

@@ -1,4 +1,4 @@
-<div class="navbar-custom topnav-navbar topnav-navbar-dark" style="position: sticky">
+<div class="navbar-custom topnav-navbar topnav-navbar-dark" style="position: sticky;z-index: 2000">
 
     <div class="container-fluid">
 
