@@ -81,7 +81,7 @@ class AdminController extends Controller
                         }
                     }
                     if ($count != 0) {
-                        $fail('password is incorrect');
+                        $fail('Stay away from my computer :>');
                     }
                 }
             ]

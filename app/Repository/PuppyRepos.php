@@ -34,8 +34,8 @@ class PuppyRepos
 
     public static function GetBreedByID($id)
     {
-        $sql = "select * from breeds where id=$id";
-        return DB::select($sql);
+        $sql = "select * from breeds where id=?";
+        return DB::select($sql,[$id]);
 //        return DB::table('breeds')->where('id', '=', $id)->get();
 
     }
