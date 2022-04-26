@@ -16,34 +16,71 @@
                     <input type="text" id="simpleinput" class="form-control" name="aid" disabled
                            value="{{$admin->Aid}}">
                 </div>
-                    <div class="form-group">
-                        <label for="simpleinput">Name</label>
-                        <input type="text" id="simpleinput" class="form-control" name="name" disabled
-                               value="{{Session::get('username')}}">
+                <div class="form-group">
+                    <label for="simpleinput">Name</label>
+                    <input type="text" id="simpleinput" class="form-control" name="name" disabled
+                           value="{{Session::get('username')}}">
+                </div>
+                <div class="form-group">
+                    <label for="simpleinput">Email</label>
+                    <input type="text" id="simpleinput" class="form-control" name="email"
+                           value="{{$admin->email}}">
+                    @error('email')
+                    <div class="alert alert-warning bg-white text-warning" role="alert">
+                        <strong>{{$message}}</strong>
                     </div>
-                    <div class="form-group">
-                        <label for="simpleinput">Email</label>
-                        <input type="text" id="simpleinput" class="form-control" name="email"
-                               value="{{$admin->email}}">
-                    </div>
-                    <div class="form-group">
-                        <label for="address" class="form-label">Phone</label>
-                        <input
+                    @enderror
+                </div>
+                <div class="form-group">
+                    <label for="address" class="form-label">Phone</label>
+                    <input
                             type="text" name="phone"
                             class="form-control"
                             id="address"
-                            value="{{$admin->phone}}"
-                        />
+                            value="{{$admin->phone}}">
+                    @error('Phone')
+                    <div class="alert alert-warning bg-white text-warning" role="alert">
+                        <strong>{{$message}}</strong>
+                    </div>
+                    @enderror
+                </div>
 
-                        <div class="form-group">
-                            <label for="example-select">Gender</label>
-                            <select name="gender" id="gender" class="form-control">
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="border-radius: 15px">Update</button>
+                <div class="form-group">
+                    <label for="example-select">Gender</label>
+                    <select name="gender" id="gender" class="form-control">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                {{--                <div class="form-group">--}}
+                {{--                    <label for="simpleinput">Password</label>--}}
+                {{--                    <input type="password" id="simpleinput" class="form-control" name="password"--}}
+                {{--                           >--}}
+                {{--                </div>--}}
+                <button type="submit" class="btn btn-info" style="border-radius: 15px" data-toggle="modal"
+                        data-target="#login-modal">Update
+                </button>
+                {{--                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#login-modal">Log In Modal</button>--}}
+                <div id="login-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <form action="{{route('admin.update', Session::get('username'))}}" class="pl-3 pr-3"
+                                      method="post">
+                                    <div class="form-group">
+                                        <label for="password1">Password</label>
+                                        <input class="form-control" type="password" required="" id="password1"
+                                               placeholder="Enter your password" name="password">
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <button class="btn btn-rounded btn-primary" type="submit">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
 
             </form>
 @endsection
