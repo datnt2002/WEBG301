@@ -14,15 +14,18 @@
                 @csrf
                 <div class="form-group">
                     <label for="simpleinput">Breed</label>
-                    <input type="text" class="form-control"  name="breed" id="simpleinput"
+                    <input type="text" class="form-control" name="breed" id="simpleinput"
                            value="{{$Breed->breed }}">
-{{--                    @error('breed')--}}
-{{--                    <div class="alert alert-warning" role="alert">--}}
-{{--                        <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>--}}
-{{--                    </div>--}}
-{{--                    @enderror--}}
-                    <button type="submit" class="btn btn-primary" style="border-radius: 15px">Submit</button>
-
+                    @error('breed')
+                    <div class="alert alert-warning" role="alert">
+                        <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
+                    </div>
+                    @enderror
+                    <button type="submit" class="btn btn-primary" style="border-radius: 15px; margin-top: 10px ">
+                        Submit
+                    </button>
+                </div>
             </form>
         </div>
+    </div>
 @endsection

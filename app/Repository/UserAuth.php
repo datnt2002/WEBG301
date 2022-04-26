@@ -49,7 +49,7 @@ class UserAuth
             'address' => $users['address'],
             'gender' => $users['gender'],
             'username' => $users['username'],
-            'password' => $users['password'],
+//            'password' => $users['password'],
         ]);
     }
     public static function delete($id)

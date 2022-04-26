@@ -13,13 +13,12 @@
                 <div class="container-fluid">
                     <h1>Puppy Management</h1>
                     <div class="col-sm-4">
-                        <a href="{{Route('puppy.create')}}" class="btn btn-danger mb-2" style="border-radius: 15px"><i
-                                    class="mdi mdi-plus-circle mr-2"></i> Add Puppy</a>
+                        <a href="{{Route('puppy.create')}}" class="btn btn-danger mb-2" style="border-radius: 15px; margin-right: 10px"><i
+                                class="mdi mdi-plus-circle mr-2"></i> Add Puppy</a>
                         <a href="{{Route('puppy.createBreed')}}" class="btn btn-danger mb-2"
                            style="border-radius: 15px"><i
-                                    class="mdi mdi-plus-circle mr-2"></i> Add Breed</a>
+                                class="mdi mdi-plus-circle mr-2"></i> Add Breed</a>
                     </div>
-
                     <table class="table table-striped table-centered mb-0 ">
                         <thead>
                         <tr>
@@ -55,12 +54,9 @@
                                     <a href="{{route('puppy.edit',['id'=>$each->Pid])}}" class="action-icon">
                                         <i class="mdi mdi-pencil"></i>
                                     </a>
-
                                     <a href="{{route('puppy.confirm',['id'=>$each->Pid])}}" class="action-icon">
                                         <i class="mdi mdi-delete"></i>
                                     </a>
-
-{{--                                    @include('puppywebsite.deletePetmodal')--}}
                                 </td>
                             </tr>
                         @endforeach
@@ -70,25 +66,5 @@
             </div>
         </div>
     </div>
-
-    {{--    --}}
-    {{--    modal confirm delete--}}
-    {{--    <div id="danger-header-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="danger-header-modalLabel" aria-hidden="true">--}}
-    {{--        <div class="modal-dialog">--}}
-    {{--            <div class="modal-content">--}}
-    {{--                <div class="modal-header modal-colored-header bg-danger">--}}
-    {{--                    <h4 class="modal-title" id="danger-header-modalLabel">Modal Heading</h4>--}}
-    {{--                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>--}}
-    {{--                </div>--}}
-    {{--                <div class="modal-body">--}}
-    {{--                    ...--}}
-    {{--                </div>--}}
-    {{--                <div class="modal-footer">--}}
-    {{--                    <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>--}}
-    {{--                    <button type="button" class="btn btn-danger">Save changes</button>--}}
-    {{--                </div>--}}
-    {{--            </div><!-- /.modal-content -->--}}
-    {{--        </div><!-- /.modal-dialog -->--}}
-    {{--    </div><!-- /.modal -->--}}
 @endsection
 

@@ -60,7 +60,7 @@ class RegisterController extends Controller
 
     public function updateCustomer(Request $request, $id)
     {
-        $this->validation($request)->validate();
+        $this->Vali($request)->validate();
 
         $user = [
             'fullName' => $request->input('fullName'),
@@ -100,5 +100,14 @@ class RegisterController extends Controller
         );
     }
 
+    private function Vali($request)
+    {
+        return Validator::make($request->all(), [
+                'fullName' => ['required'],
+                'email' => ['required'],
+                'address' => ['required'],
 
+            ]
+        );
+    }
 }

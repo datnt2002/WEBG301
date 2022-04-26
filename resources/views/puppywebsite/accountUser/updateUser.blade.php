@@ -18,11 +18,17 @@
                         <label for="simpleinput">Name</label>
                         <input type="text" id="simpleinput" class="form-control" name="fullName"
                                value="{{$user->customer_name}}">
+                        @error('fullname')
+                       <p>{{$message}}</p>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="simpleinput">Email</label>
                         <input type="text" id="simpleinput" class="form-control" name="email"
                                value="{{$user->email}}">
+                        @error('email')
+                        {{$message}}
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="address" class="form-label">Address</label>
@@ -32,7 +38,10 @@
                             id="address"
                             value="{{$user->address}}"
                         />
-
+                        @error('address')
+                        {{$message}}
+                        @enderror
+                    </div>
                         {{--                    <div class="form-group">--}}
                         {{--                        <label for="example-select">Breed</label>--}}
                         {{--                        <select class="form-control" id="example-select" name="Breed">--}}
@@ -51,18 +60,22 @@
                                 <option value="female">Female</option>
                                 <option value="other">Other</option>
                             </select>
+                            @error('gender')
+                            {{$message}}
+                            @enderror
                         </div>
 
-                        <div class="form-group">
-                            <label for="simpleinput">Username</label>
-                            <input type="text" id="simpleinput" class="form-control" name="username"
-                                   value="{{ $user->username}}">
-                        </div>
-                        <div class="form-group">
-                            <label for="simpleinput">Password</label>
-                            <input type="text" id="simpleinput" class="form-control" name="password"
-                                   value="{{$user->password}}">
-                        </div>
+{{--                        <div class="form-group">--}}
+{{--                            <label for="simpleinput">Username</label>--}}
+{{--                            <input type="hidden" id="simpleinput" class="form-control" name="username"--}}
+{{--                                   value="{{ $user->username}}">--}}
+{{--                            --}}
+{{--                        </div>--}}
+{{--                        <div class="form-group">--}}
+{{--                            <label for="simpleinput">Password</label>--}}
+{{--                            <input type="text" id="simpleinput" class="form-control" name="password"--}}
+{{--                                   value="{{$user->password}}">--}}
+{{--                        </div>--}}
                         @endforeach
 
                         <button type="submit" class="btn btn-primary" style="border-radius: 15px">Update</button>
