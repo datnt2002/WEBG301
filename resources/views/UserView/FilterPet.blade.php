@@ -12,7 +12,7 @@
     <div id="carouselExampleControls" class="carousel slide "
          data-ride="carousel" style="height: 500px">
         <div class="carousel-inner" role="listbox" style="height: 100%; width: 100%">
-            <div class="carousel-item active">
+            <div class="carousel-item ">
                 <img class="d-block img-fluid mx-auto"
                      src="{{asset('/images/puppy_images/bg.jpg')}}" alt="First slide">
                 <div class="carousel-caption d-none d-md-block" style="height: 100%;">
@@ -21,7 +21,7 @@
                     <p>Browse pets from our network of over 11,500 shelters and rescues.</p>
                 </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item active">
                 <img class="d-block img-fluid mx-auto"
                      src="{{asset('/images/puppy_images/big.jpg')}}" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block" style="height: 100%;">
@@ -58,15 +58,15 @@
                 <div class="content">
                     <div class="row">
                         @foreach($pet as $each)
-                            <div class="col-md-6 col-xl-3" style="margin-top:30px">
+                            <div class="col-md-6 col-xl-3" >
+                            <div class="card d-block text-dark" style="width: 300px; height: 350px; margin: 50px 50px; box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.25),
+  0 5px 15px 0 rgba(0, 0, 0, 0.12)">
                                 <!-- project card -->
-
-                                <div class="card d-block" style="width: 330px; height: 350px; margin: 50px 50px">
                                     <!-- project-thumbnail -->
                                     <img class="card-img-top" src="{{$each->image}}"
                                          alt="project image cap" style="height: 100%; width:100%">
 
-                                    <div class="card-body position-relative">
+                                <div class="card-body position-relative" style="padding-left: unset; padding-right: unset; margin-bottom: 9px ">
                                         <!-- project title-->
                                         <h4 class="mt-0">
                                             <a href="{{Route('Pet.Detail',['id'=>$each->Pid])}}"

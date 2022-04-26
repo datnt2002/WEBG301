@@ -54,5 +54,13 @@ class Usercontroller extends Controller
     public function AboutUs(){
         return view('UserView.aboutus');
     }
-
+    public function Tip(){
+        return view('UserView.tips');
+    }
+    public function gallery(){
+        $pets = User::GetImagePet();
+        return view('UserView.gallery', [
+            'pets' => $pets
+        ]);
+    }
 }

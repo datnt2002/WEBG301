@@ -50,6 +50,8 @@ Route::prefix('Main')->group(function () {
 
     Route::get('/Filter/{id}', [UserController::class, 'FilterPet'])->name('FilterPet');
     Route::get('/AboutUs', [UserController::class, 'AboutUs'])->name('user.aboutus');
+    Route::get('/Tip', [UserController::class, 'Tip'])->name('user.tip');
+    Route::get('/gallery', [UserController::class, 'gallery'])->name('user.gallery');
 });
 
 

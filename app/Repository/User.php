@@ -27,4 +27,8 @@ class User
         return DB::select($sql);
 //        return DB::table('puppy')->where('Pid', '=', $id)->get();
     }
+    public static function GetImagePet(){
+        $image = "select * from puppy";
+        return DB::select($image);
+    }
 }

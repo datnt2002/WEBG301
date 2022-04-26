@@ -1,6 +1,7 @@
 @extends('PuppyWebsiteMaster.loginMaster')
 
 @section('main')
+
     <section>
         <div class="container py-5 h-100">
             <div class="row justify-content-center align-items-center h-100">
@@ -113,9 +114,9 @@
                                     <input class="btn btn-primary btn-lg" type="submit" value="Submit"/>
                                 </div>
 
-{{--                                <div class="signup_link">--}}
-{{--                                    Have a account? <a href="{{route('admin.login')}}">Sign in</a>--}}
-{{--                                </div>--}}
+                                <div class="signup_link">
+                                    Back to website? <a href="{{route('user.view')}}">Visit website</a>
+                                </div>
 
                             </form>
                         </div>
