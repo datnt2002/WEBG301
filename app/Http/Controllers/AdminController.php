@@ -49,6 +49,7 @@ class AdminController extends Controller
             'email' => $request->input('email'),
             'phone' => $request->input('phone'),
             'gender' => $request->input('gender'),
+            'username' => $request->input('username'),
             'password' => $request->input('password'),
 //            'username' => $request->input('username'),
 
@@ -61,8 +62,7 @@ class AdminController extends Controller
     {
         return Validator::make($request->all(), [
             'email' => ['required'],
-            'phone' => ['required'],
-            'gender' => ['required'],
+//            'Phone' => ['required'],
             'password' => [
                 'required',
                 function ($atribute, $value, $fail) use ($request) {
@@ -71,8 +71,8 @@ class AdminController extends Controller
                     $count = 0;
                     for ($i = 0, $iMax = count($admin); $i < $iMax; $i++) {
                         if ($username == $admin[$i]->username) {
-                            $pwd = sha1($request->input('password'));
-                            if ($pwd != $admin[$i]->password) {
+                            $value = sha1($request->input('password'));
+                            if ($value != $admin[$i]->password) {
                                 $count += 1;
                                 break;
                             }

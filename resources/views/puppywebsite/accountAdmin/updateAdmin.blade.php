@@ -12,13 +12,8 @@
             <form action="{{route('admin.update', Session::get('username'))}}" method="post">
                 @csrf
                 <div class="form-group">
-                    <label for="simpleinput">ID</label>
-                    <input type="text" id="simpleinput" class="form-control" name="aid" disabled
-                           value="{{$admin->Aid}}">
-                </div>
-                <div class="form-group">
-                    <label for="simpleinput">Name</label>
-                    <input type="text" id="simpleinput" class="form-control" name="username" disabled
+                    {{--                    <label for="simpleinput">Name</label>--}}
+                    <input type="hidden" id="simpleinput" class="form-control" name="username"
                            value="{{Session::get('username')}}">
                 </div>
                 <div class="form-group">
@@ -54,25 +49,21 @@
                     </select>
                 </div>
                 {{--                <div class="form-group">--}}
-                {{--                    <label for="simpleinput">Password</label>--}}
-                {{--                    <input type="password" id="simpleinput" class="form-control" name="password"--}}
-                {{--                    >--}}
+                {{--                    <label for="password1">Password</label>--}}
+                {{--                    <input class="form-control" type="password" required="" id="password1"--}}
+                {{--                           placeholder="Enter your password" name="password">--}}
                 {{--                </div>--}}
-                <button type="button" class="btn btn-info" style="border-radius: 15px" data-toggle="modal"
-                        data-target="#login-modal">Update
+{{--                <button type="button" class="btn btn-info" style="border-radius: 15px" data-toggle="modal"--}}
+{{--                        data-target="#login-modal">Update--}}
+{{--                </button>--}}
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#login-modal">Log In Modal
                 </button>
-                {{--                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#login-modal">Log In Modal</button>--}}
                 <div id="login-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-body">
                                 <form action="{{route('admin.update', Session::get('username'))}}" class="pl-3 pr-3"
                                       method="post">
-                                    <div class="form-group">
-                                        <label for="emailaddress">Email address</label>
-                                        <input class="form-control" type="text" id="emailaddress" required=""
-                                               placeholder="Enter Username" name="username">
-                                    </div>
                                     <div class="form-group">
                                         <label for="password1">Password</label>
                                         <input class="form-control" type="password" required="" id="password1"
@@ -87,4 +78,6 @@
                     </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->
             </form>
+        </div>
+    </div>
 @endsection
