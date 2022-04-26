@@ -53,17 +53,14 @@
                                 </td>
                                 <td class="table-action">
                                     <a href="{{route('puppy.edit',['id'=>$each->Pid])}}" class="action-icon">
-                                        <i class="mdi mdi-pencil"></i></a>
+                                        <i class="mdi mdi-pencil"></i>
+                                    </a>
 
-                                    {{--                                    <a href="{{route('puppy.confirm',['id'=>$each->Pid])}}" class="action-icon"--}}
-                                    {{--                                       data-toggle="modal" data-target="#danger-header-modal"--}}
-                                    {{--                                    >--}}
-                                    {{--                                        <i class="mdi mdi-delete"></i></a>--}}
-{{--                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">--}}
+                                    <a href="{{route('puppy.confirm',['id'=>$each->Pid])}}" class="action-icon">
+                                        <i class="mdi mdi-delete"></i>
+                                    </a>
 
-                                        <i class="mdi mdi-delete action-icon" type="button" data-toggle="modal" data-target="#exampleModalScrollable">
-{{--                                    </button>--}}
-                                    @include('puppywebsite.deletePetmodal')
+{{--                                    @include('puppywebsite.deletePetmodal')--}}
                                 </td>
                             </tr>
                         @endforeach
