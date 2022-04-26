@@ -56,7 +56,7 @@
 {{--                <button type="button" class="btn btn-info" style="border-radius: 15px" data-toggle="modal"--}}
 {{--                        data-target="#login-modal">Update--}}
 {{--                </button>--}}
-                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#login-modal">Log In Modal
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#login-modal">Update
                 </button>
                 <div id="login-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog">
