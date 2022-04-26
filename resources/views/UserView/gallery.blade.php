@@ -24,7 +24,7 @@
             <i class=" mdi mdi-instagram" style="color: rgba(239,239,239,0.99); font-size: 25px"></i>
 
             <h5 style="color: rgba(226,226,226,0.99);">Datntgch200102@fpt.edu.vn</h5>
-            <h5 style="color: rgba(226,226,226,0.99);">gggggggggggggggggggggggg</h5>
+            <h5 style="color: rgba(226,226,226,0.99);">Hoanghip108@gmail.com</h5>
             <a href="{{route('user.view')}}" style="color: #00bdbd; font-size: 20px">Back to main page</a>
             </div>
         </div>
