@@ -18,8 +18,10 @@
                         <label for="simpleinput">Name</label>
                         <input type="text" id="simpleinput" class="form-control" name="fullName"
                                value="{{$user->customer_name}}">
-                        @error('fullname')
-                       <p>{{$message}}</p>
+                        @error('fullName')
+                        <div class="alert alert-warning" role="alert">
+                            <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
+                        </div>
                         @enderror
                     </div>
                     <div class="form-group">
@@ -27,7 +29,9 @@
                         <input type="text" id="simpleinput" class="form-control" name="email"
                                value="{{$user->email}}">
                         @error('email')
-                        {{$message}}
+                        <div class="alert alert-warning" role="alert">
+                            <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
+                        </div>
                         @enderror
                     </div>
                     <div class="form-group">
@@ -39,20 +43,11 @@
                             value="{{$user->address}}"
                         />
                         @error('address')
-                        {{$message}}
+                        <div class="alert alert-warning" role="alert">
+                            <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
+                        </div>
                         @enderror
                     </div>
-                        {{--                    <div class="form-group">--}}
-                        {{--                        <label for="example-select">Breed</label>--}}
-                        {{--                        <select class="form-control" id="example-select" name="Breed">--}}
-                        {{--                            @foreach($breed as $each)--}}
-                        {{--                                <option value=" {{ $each->id}}">{{$each->bread}}</option>--}}
-                        {{--                            @endforeach--}}
-                        {{--                        </select>--}}
-                        {{--                        <div>--}}
-                        {{--                            --}}{{--                {{dd($breed)}}--}}
-                        {{--                        </div>--}}
-                        {{--                    </div>--}}
                         <div class="form-group">
                             <label for="example-select">Gender</label>
                             <select name="gender" id="gender" class="form-control" >
@@ -61,21 +56,12 @@
                                 <option value="other">Other</option>
                             </select>
                             @error('gender')
-                            {{$message}}
+                            <div class="alert alert-warning" role="alert">
+                                <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
+                            </div>
                             @enderror
                         </div>
 
-{{--                        <div class="form-group">--}}
-{{--                            <label for="simpleinput">Username</label>--}}
-{{--                            <input type="hidden" id="simpleinput" class="form-control" name="username"--}}
-{{--                                   value="{{ $user->username}}">--}}
-{{--                            --}}
-{{--                        </div>--}}
-{{--                        <div class="form-group">--}}
-{{--                            <label for="simpleinput">Password</label>--}}
-{{--                            <input type="text" id="simpleinput" class="form-control" name="password"--}}
-{{--                                   value="{{$user->password}}">--}}
-{{--                        </div>--}}
                         @endforeach
 
                         <button type="submit" class="btn btn-primary" style="border-radius: 15px">Update</button>

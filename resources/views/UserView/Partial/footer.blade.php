@@ -10,11 +10,6 @@
                 >
             </a>
 
-            <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/profile.php?id=100009220811268" role="button target='_blank'"
-            ><i class="fab fa-facebook-f"></i
-                >
-            </a>
-
             <!-- Twitter -->
             <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
             ><i class="fab fa-twitter"></i

@@ -44,10 +44,9 @@ class RegisterController extends Controller
             'username' => $request->input('username'),
             'password' => $request->input('password')
         ];
-//        dd($users);
         UserAuth::store($users);
 
-        return redirect()->route('admin.login');
+        return redirect()->route('user.view');
     }
 
     public function editCustomer($id)
@@ -92,9 +91,9 @@ class RegisterController extends Controller
     {
         return Validator::make($request->all(), [
                 'fullName' => ['required'],
-                'email' => ['required'],
+                'email' => ['required', 'email', 'ends_with:@gmail.com, @fpt.edu.vn', 'unique:users,email'],
                 'address' => ['required'],
-                'username' => ['required'],
+                'username' => ['required','unique:users,username'],
                 'password' => ['required', 'min:8'],
             ]
         );
@@ -104,9 +103,8 @@ class RegisterController extends Controller
     {
         return Validator::make($request->all(), [
                 'fullName' => ['required'],
-                'email' => ['required'],
+                'email' => ['required','email', 'ends_with:@gmail.com, @fpt.edu.vn', 'unique:users,email'],
                 'address' => ['required'],
-
             ]
         );
     }

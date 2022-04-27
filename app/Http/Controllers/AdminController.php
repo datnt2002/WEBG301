@@ -61,8 +61,8 @@ class AdminController extends Controller
     private function validation($request)
     {
         return Validator::make($request->all(), [
-            'email' => ['required','email'],
-            'phone' => ['required','min:9','numeric'],
+            'email' => ['required','email', 'ends_with:@gmail.com, @fpt.edu.vn'],
+            'phone' => ['required','digits_between:10,11','starts_with:0'],
             'password' => [
                 'required',
                 function ($attribute, $value, $fail) use ($request) {
