@@ -44,7 +44,7 @@
                             class="form-control"
                             id="address"
                             value="{{$admin->phone}}">
-                    @error('Phone')
+                    @error('phone')
                     <div class="alert alert-warning bg-white text-warning" role="alert">
                         <strong>{{$message}}</strong>
                     </div>

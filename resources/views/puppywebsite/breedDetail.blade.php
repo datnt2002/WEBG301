@@ -20,6 +20,12 @@
                                 <label for="simpleinput">Breed</label>
                                 <input type="text" id="simpleinput" class="form-control" name="breed"
                                        value="{{$each->bread}}">
+
+                                @error('breed')
+                                <div class="alert alert-warning" role="alert">
+                                    <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
+                                </div>
+                                @enderror
                             </div>
                         @endforeach
 

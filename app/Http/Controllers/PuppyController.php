@@ -37,6 +37,7 @@ class PuppyController extends Controller
 
     public function breedEdit(Request $rq, $id)
     {
+        $this->validationBreed($rq)->validate();
         $breed = [
             'breed' => $rq->breed
         ];
@@ -46,6 +47,7 @@ class PuppyController extends Controller
 
     public function breedUpdate($id)
     {
+
         $breed = PuppyRepos::GetBreedByID($id);
         return view('puppywebsite.breedDetail', [
             'breed' => $breed
@@ -121,7 +123,6 @@ class PuppyController extends Controller
         return redirect()->route('puppy.index');
     }
 
-
     public function edit($id)
     {
         $pets = PuppyRepos::GetPetByID($id);
@@ -151,17 +152,19 @@ class PuppyController extends Controller
     }
 
 
+
     private function validation($rq)
     {
-        return Validator::make($rq->all(), [
-            'name' => ['required',],
-            'area' => ['required'],
-            'Breed' => ['required'],
-            'gender' => ['required'],
-            'image' => ['required'],
-            'color' => ['required'],
-            'detail' => ['required']
-        ]);
+        return Validator::make($rq->all(),
+            [
+                'name' => ['required',],
+                'area' => ['required'],
+                'Breed' => ['required'],
+                'gender' => ['required'],
+                'image' => ['required'],
+                'color' => ['required'],
+                'detail' => ['required']
+            ]);
     }
 
     private function validationBreed($rq)
