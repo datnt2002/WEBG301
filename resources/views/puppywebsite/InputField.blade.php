@@ -21,23 +21,21 @@
     </div>
     @enderror
 </div>
-{{--        @php--}}
-{{--            $Bid = old('Breed') ?? $breed[0]->id ?? null;--}}
-{{--        @endphp--}}
+{{--@php--}}
+{{--    $BId = old('Breed') ?? $breed[0]->id ?? null;--}}
+{{--@endphp--}}
 <div class="form-group">
     <label for="example-select">Breed</label>
-    <select class="form-control" id="example-select" name="Breed">
+    <select class="form-control" id="example-select" name="Breed" required>
         <option value="">Choose</option>
         @foreach($breed as $each)
             <option value=" {{ $each->id}}"
-                {{--                            {{ ($Bid != null && $breed[0]->id == $Bid) ? 'selected' : '' }}--}}
+{{--                    {{($BId != null && $breed[0]->id == $BId) ? 'selected' : '' }}--}}
+                    {{old('Breed')!=null && old('Breed')==$each->id? 'selected':''}}
             >{{$each->bread}}</option>
         @endforeach
-
     </select>
-    <div>
-        {{--                {{dd($breed)}}--}}
-    </div>
+{{--  --}}
     @error('Breed')
     <div class="alert alert-warning" role="alert">
         <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
@@ -48,8 +46,8 @@
     <label for="example-select">Gender</label>
     <select name="gender" id="example-select" class="form-control" name="gender">
         <option value="">Choose</option>
-        <option value="1">Male</option>
-        <option value="0">Female</option>
+        <option value="1"{{old('gender')!=null && old('gender')=='1'? 'selected':''}}>Male</option>
+        <option value="0"{{old('gender')!=null && old('gender')=='0'? 'selected':''}}>Female</option>
     </select>
     @error('gender')
     <div class="alert alert-warning" role="alert">
