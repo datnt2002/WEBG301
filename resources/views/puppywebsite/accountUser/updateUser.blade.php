@@ -48,22 +48,22 @@
                         </div>
                         @enderror
                     </div>
-                        <div class="form-group">
-                            <label for="example-select">Gender</label>
-                            <select name="gender" id="gender" class="form-control" >
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="other">Other</option>
-                            </select>
-                            @error('gender')
-                            <div class="alert alert-warning" role="alert">
-                                <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
-                            </div>
-                            @enderror
+                    <div class="form-group">
+                        <label for="example-select">Gender</label>
+                        <select name="gender" id="gender" class="form-control">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        @error('gender')
+                        <div class="alert alert-warning" role="alert">
+                            <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>
                         </div>
+                        @enderror
+                    </div>
 
-                        @endforeach
+                @endforeach
 
-                        <button type="submit" class="btn btn-primary" style="border-radius: 15px">Update</button>
+                <button type="submit" class="btn btn-primary" style="border-radius: 15px">Update</button>
             </form>
 @endsection

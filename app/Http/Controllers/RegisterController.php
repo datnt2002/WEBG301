@@ -103,7 +103,7 @@ class RegisterController extends Controller
     {
         return Validator::make($request->all(), [
                 'fullName' => ['required'],
-                'email' => ['required','email', 'ends_with:@gmail.com, @fpt.edu.vn', 'unique:users,email'],
+                'email' => ['required','email', 'ends_with:@gmail.com, @fpt.edu.vn'],
                 'address' => ['required'],
             ]
         );
