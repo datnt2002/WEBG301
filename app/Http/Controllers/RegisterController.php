@@ -91,7 +91,7 @@ class RegisterController extends Controller
     {
         return Validator::make($request->all(), [
                 'fullName' => ['required'],
-                'email' => ['required', 'email', 'ends_with:@gmail.com, @fpt.edu.vn', 'unique:users,email'],
+                'email' => ['required', 'email', 'ends_with:@gmail.com', 'unique:users,email'],
                 'address' => ['required'],
                 'username' => ['required','unique:users,username'],
                 'password' => ['required', 'min:8'],
@@ -103,7 +103,7 @@ class RegisterController extends Controller
     {
         return Validator::make($request->all(), [
                 'fullName' => ['required'],
-                'email' => ['required','email', 'ends_with:@gmail.com, @fpt.edu.vn'],
+                'email' => ['required','email', 'ends_with:@gmail.com'],
                 'address' => ['required'],
             ]
         );

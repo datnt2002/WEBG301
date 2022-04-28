@@ -49,7 +49,7 @@ class AdminController extends Controller
             'email' => $request->input('email'),
             'phone' => $request->input('phone'),
             'gender' => $request->input('gender'),
-            'username' => $request->input('username'),
+//            'username' => $request->input('username'),
             'password' => $request->input('password'),
 //            'username' => $request->input('username'),
 
@@ -61,7 +61,7 @@ class AdminController extends Controller
     private function validation($request)
     {
         return Validator::make($request->all(), [
-            'email' => ['required','email', 'ends_with:@gmail.com, @fpt.edu.vn'],
+            'email' => ['required','email', 'ends_with:@gmail.com'],
             'phone' => ['required','digits_between:10,11','starts_with:0'],
             'password' => [
                 'required',
