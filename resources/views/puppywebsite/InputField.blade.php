@@ -21,13 +21,10 @@
     </div>
     @enderror
 </div>
-{{--@php--}}
-{{--    $BId = old('Breed') ?? $breed[0]->id ?? null;--}}
-{{--@endphp--}}
 <div class="form-group">
     <label for="example-select">Breed</label>
-    <select class="form-control" id="example-select" name="Breed" required>
-        <option value="">Choose</option>
+    <select class="form-control" id="example-select" name="Breed" >
+        <option value="">Choose breed</option>
         @foreach($breed as $each)
             <option value=" {{ $each->id}}"
 {{--                    {{($BId != null && $breed[0]->id == $BId) ? 'selected' : '' }}--}}
@@ -58,7 +55,7 @@
 <div class="form-group">
     <label for="simpleinput">Image</label>
     <input type="file" id="simpleinput" class="form-control" name="image"
-           value="{{old('image') ?? $pet->image }}">
+           value="{{$pet->image }}">
     @error('image')
     <div class="alert alert-warning" role="alert">
         <i class="dripicons-wrong mr-2"></i><strong>{{$message}}</strong>

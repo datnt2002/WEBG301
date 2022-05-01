@@ -8,17 +8,17 @@
     @include('partials.LeftNav');
     <div class="container-fluid">
         <div class="content-page" style="padding: 0 20px 100px 20px">
-        @error('password')
-                    <div class="modal-content modal-filled bg-danger">
-                        <div class="modal-body p-4">
-                            <div class="text-center">
-                                <i class="dripicons-wrong h1"></i>
-                                <h4 class="mt-2">Oh snap!</h4>
-                                <p class="mt-3"><strong>{{$message}}</strong></p>
-                            </div>
-                        </div>
-                    </div><!-- /.modal-content -->
-        @enderror
+            @error('password')
+            <div class="modal-content modal-filled bg-danger">
+                <div class="modal-body p-4">
+                    <div class="text-center">
+                        <i class="dripicons-wrong h1"></i>
+                        <h4 class="mt-2">Oh snap!</h4>
+                        <p class="mt-3"><strong>{{$message}}</strong></p>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+            @enderror
             <h1>Edit Admin</h1>
             <form action="{{route('admin.update', Session::get('username'))}}" method="post">
                 @csrf
@@ -59,14 +59,6 @@
                         <option value="other">Other</option>
                     </select>
                 </div>
-                {{--                <div class="form-group">--}}
-                {{--                    <label for="password1">Password</label>--}}
-                {{--                    <input class="form-control" type="password" required="" id="password1"--}}
-                {{--                           placeholder="Enter your password" name="password">--}}
-                {{--                </div>--}}
-{{--                <button type="button" class="btn btn-info" style="border-radius: 15px" data-toggle="modal"--}}
-{{--                        data-target="#login-modal">Update--}}
-{{--                </button>--}}
                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#login-modal">Update
                 </button>
                 <div id="login-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
